@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://fredyang.com/"/>
   <updated>2016-05-24T15:39:43.570Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://fredyang.com/</id>
   
   <author>
     <name>Fredyang</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>PHP底层接口</title>
-    <link href="http://yoursite.com/2016/05/24/php-low-layer-interface/"/>
-    <id>http://yoursite.com/2016/05/24/php-low-layer-interface/</id>
+    <link href="http://fredyang.com/2016/05/24/php-low-layer-interface/"/>
+    <id>http://fredyang.com/2016/05/24/php-low-layer-interface/</id>
     <published>2016-05-24T15:35:56.000Z</published>
     <updated>2016-05-24T15:39:43.570Z</updated>
     
@@ -44,19 +44,19 @@
     
     </summary>
     
-      <category term="php" scheme="http://yoursite.com/categories/php/"/>
+      <category term="php" scheme="http://fredyang.com/categories/php/"/>
     
     
-      <category term="php" scheme="http://yoursite.com/tags/php/"/>
+      <category term="php" scheme="http://fredyang.com/tags/php/"/>
     
-      <category term="low-layer interface" scheme="http://yoursite.com/tags/low-layer-interface/"/>
+      <category term="low-layer interface" scheme="http://fredyang.com/tags/low-layer-interface/"/>
     
   </entry>
   
   <entry>
     <title>MySQL复合索引使用需知</title>
-    <link href="http://yoursite.com/2016/05/24/note-about-mysql-multiple-column-indexes/"/>
-    <id>http://yoursite.com/2016/05/24/note-about-mysql-multiple-column-indexes/</id>
+    <link href="http://fredyang.com/2016/05/24/note-about-mysql-multiple-column-indexes/"/>
+    <id>http://fredyang.com/2016/05/24/note-about-mysql-multiple-column-indexes/</id>
     <published>2016-05-24T14:59:57.000Z</published>
     <updated>2016-05-24T15:04:13.255Z</updated>
     
@@ -81,19 +81,19 @@
     
     </summary>
     
-      <category term="database" scheme="http://yoursite.com/categories/database/"/>
+      <category term="database" scheme="http://fredyang.com/categories/database/"/>
     
     
-      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
+      <category term="mysql" scheme="http://fredyang.com/tags/mysql/"/>
     
-      <category term="multiple-column indexes" scheme="http://yoursite.com/tags/multiple-column-indexes/"/>
+      <category term="multiple-column indexes" scheme="http://fredyang.com/tags/multiple-column-indexes/"/>
     
   </entry>
   
   <entry>
     <title>有意思的定理和法则</title>
-    <link href="http://yoursite.com/2016/05/23/funny-rules-and-effects/"/>
-    <id>http://yoursite.com/2016/05/23/funny-rules-and-effects/</id>
+    <link href="http://fredyang.com/2016/05/23/funny-rules-and-effects/"/>
+    <id>http://fredyang.com/2016/05/23/funny-rules-and-effects/</id>
     <published>2016-05-23T11:01:54.000Z</published>
     <updated>2016-05-24T14:53:56.641Z</updated>
     
@@ -130,19 +130,19 @@
     
     </summary>
     
-      <category term="Thinking" scheme="http://yoursite.com/categories/Thinking/"/>
+      <category term="Thinking" scheme="http://fredyang.com/categories/Thinking/"/>
     
     
-      <category term="Social" scheme="http://yoursite.com/tags/Social/"/>
+      <category term="Social" scheme="http://fredyang.com/tags/Social/"/>
     
-      <category term="Psychological" scheme="http://yoursite.com/tags/Psychological/"/>
+      <category term="Psychological" scheme="http://fredyang.com/tags/Psychological/"/>
     
   </entry>
   
   <entry>
     <title>hello my first post</title>
-    <link href="http://yoursite.com/2016/05/22/hello-my-first-post/"/>
-    <id>http://yoursite.com/2016/05/22/hello-my-first-post/</id>
+    <link href="http://fredyang.com/2016/05/22/hello-my-first-post/"/>
+    <id>http://fredyang.com/2016/05/22/hello-my-first-post/</id>
     <published>2016-05-22T12:11:33.000Z</published>
     <updated>2016-05-22T16:08:31.967Z</updated>
     
@@ -157,19 +157,19 @@
     
     </summary>
     
-      <category term="test" scheme="http://yoursite.com/categories/test/"/>
+      <category term="test" scheme="http://fredyang.com/categories/test/"/>
     
     
-      <category term="hello" scheme="http://yoursite.com/tags/hello/"/>
+      <category term="hello" scheme="http://fredyang.com/tags/hello/"/>
     
-      <category term="test" scheme="http://yoursite.com/tags/test/"/>
+      <category term="test" scheme="http://fredyang.com/tags/test/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2016/05/22/hello-world/"/>
-    <id>http://yoursite.com/2016/05/22/hello-world/</id>
+    <link href="http://fredyang.com/2016/05/22/hello-world/"/>
+    <id>http://fredyang.com/2016/05/22/hello-world/</id>
     <published>2016-05-22T11:38:59.069Z</published>
     <updated>2016-05-22T11:38:59.071Z</updated>
     
