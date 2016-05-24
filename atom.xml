@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-05-24T01:30:12.514Z</updated>
+  <updated>2016-05-24T01:45:23.341Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>funny rules and effects</title>
+    <title>有意思的定理和法则</title>
     <link href="http://yoursite.com/2016/05/23/funny-rules-and-effects/"/>
     <id>http://yoursite.com/2016/05/23/funny-rules-and-effects/</id>
     <published>2016-05-23T11:01:54.000Z</published>
-    <updated>2016-05-24T01:30:12.514Z</updated>
+    <updated>2016-05-24T01:45:23.341Z</updated>
     
     <content type="html">&lt;p&gt;&lt;strong&gt;蓝斯登原则&lt;/strong&gt;&lt;br&gt;在你往上爬的时候，一定要保持梯子的整洁，否则你下来时可能会滑倒。 &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;托利得定理&lt;/strong&gt;&lt;br&gt;测验一个人的智力是否属于上乘，只看脑子里能否同时容纳两种相反的思想，而无碍于其处世行事。 &lt;/p&gt;
@@ -51,8 +51,12 @@
     
     </summary>
     
-      <category term="思考和表达" scheme="http://yoursite.com/categories/%E6%80%9D%E8%80%83%E5%92%8C%E8%A1%A8%E8%BE%BE/"/>
+      <category term="Thinking" scheme="http://yoursite.com/categories/Thinking/"/>
     
+    
+      <category term="Social" scheme="http://yoursite.com/tags/Social/"/>
+    
+      <category term="Psychological" scheme="http://yoursite.com/tags/Psychological/"/>
     
   </entry>
   
