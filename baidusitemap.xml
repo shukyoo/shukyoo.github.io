@@ -4,8 +4,52 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/05/24/php-low-layer-interface/</loc>
+    <lastmod>2016-05-24T15:39:43.570Z</lastmod>
+    <data>
+        <display>
+        <title>PHP底层接口</title>
+        <pubTime>2016-05-24T15:35:56.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>low-layer interface</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://yoursite.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/05/24/note-about-mysql-multiple-column-indexes/</loc>
+    <lastmod>2016-05-24T15:04:13.255Z</lastmod>
+    <data>
+        <display>
+        <title>MySQL复合索引使用需知</title>
+        <pubTime>2016-05-24T14:59:57.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+        <tag>multiple-column indexes</tag>
+         
+         
+           
+             
+              <breadCrumb title="database" url="http://yoursite.com/categories/database/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2016/05/23/funny-rules-and-effects/</loc>
-    <lastmod>2016-05-24T01:45:23.341Z</lastmod>
+    <lastmod>2016-05-24T14:53:56.641Z</lastmod>
     <data>
         <display>
         <title>有意思的定理和法则</title>

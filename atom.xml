@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-05-24T01:45:23.341Z</updated>
+  <updated>2016-05-24T15:39:43.570Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,17 +16,93 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>PHP底层接口</title>
+    <link href="http://yoursite.com/2016/05/24/php-low-layer-interface/"/>
+    <id>http://yoursite.com/2016/05/24/php-low-layer-interface/</id>
+    <published>2016-05-24T15:35:56.000Z</published>
+    <updated>2016-05-24T15:39:43.570Z</updated>
+    
+    <content type="html">&lt;p&gt;通过继承和实现PHP的底层接口可以统一接口行为，实现底层特性。 &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一，Traversable&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Traversable&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;这个接口没有任何方法，它的作用仅仅是作为所有可遍历类的基本接口，不能被实现，只能通过实现Interator或InteratorAggregate而实现。 &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;二，Interator &lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Iterator extends Traversable &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; mixed current ( void )&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; scalar key ( void )&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; void next ( void )&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; void rewind ( void )&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; boolean valid ( void )&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;可实现基本的迭代功能。 &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;三，InteratorAggregate &lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;IteratorAggregate extends Traversable &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; Traversable getIterator ( void )&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;聚合迭代器，通过部署InteratorAggregate将数据和遍历分离。 &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;四，ArrayAccess&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ArrayAccess &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; boolean offsetExists ( mixed $offset )&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; mixed offsetGet ( mixed $offset )&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; void offsetSet ( mixed $offset , mixed $value )&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; void offsetUnset ( mixed $offset )&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;可以像数组一样操作自已的类 &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;五，Serializable&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Serializable &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; string serialize ( void )&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; mixed unserialize ( string $serialized )&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;自定义序列化实现 &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;六，Countable&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Countable &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; int count ( void )&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;实现count计算 &lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;通过继承和实现PHP的底层接口可以统一接口行为，实现底层特性。 &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一，Traversable&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pr
+    
+    </summary>
+    
+      <category term="php" scheme="http://yoursite.com/categories/php/"/>
+    
+    
+      <category term="php" scheme="http://yoursite.com/tags/php/"/>
+    
+      <category term="low-layer interface" scheme="http://yoursite.com/tags/low-layer-interface/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL复合索引使用需知</title>
+    <link href="http://yoursite.com/2016/05/24/note-about-mysql-multiple-column-indexes/"/>
+    <id>http://yoursite.com/2016/05/24/note-about-mysql-multiple-column-indexes/</id>
+    <published>2016-05-24T14:59:57.000Z</published>
+    <updated>2016-05-24T15:04:13.255Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;strong&gt;复合索引&lt;/strong&gt; 是指用多个字段创建一条索引；&lt;/p&gt;
+&lt;p&gt;使用复合索引的时候，需要了解以下几点： &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;MySQL每次查询只能使用一个索引，因此如果多个条件同时查询的频率较高的情况下可以考虑创建复合索引； &lt;/li&gt;
+&lt;li&gt;只有当复合索引的第一个字段出现在条件查询中，复合索引才能生效，称为复合索引的前缀性； &lt;/li&gt;
+&lt;li&gt;创建了(A, B, C)这样一个复合索引，相当于覆盖了(A, B, C), (A, B), (A)三个索引，即第2点，A必须出现在条件查询中，另外把查询频繁从高到低，对应复合索引字段从左到右排列，称为最佳左前缀特性； &lt;/li&gt;
+&lt;li&gt;不要创建过多的索引，一方面参考第1点（每次查询只能使用一个索引），另一方面过多的索引会影响表的更新效率； &lt;/li&gt;
+&lt;li&gt;复合索引和其它类型索引各有优势，因此要按实际情况来选择和创建索引； &lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;复合索引&lt;/strong&gt; 是指用多个字段创建一条索引；&lt;/p&gt;
+&lt;p&gt;使用复合索引的时候，需要了解以下几点： &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;MySQL每次查询只能使用一个索引，因此如果多个条件同时查询的频率较高的情况下可以考虑创建复合索引； &lt;/li&gt;
+&lt;l
+    
+    </summary>
+    
+      <category term="database" scheme="http://yoursite.com/categories/database/"/>
+    
+    
+      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
+    
+      <category term="multiple-column indexes" scheme="http://yoursite.com/tags/multiple-column-indexes/"/>
+    
+  </entry>
+  
+  <entry>
     <title>有意思的定理和法则</title>
     <link href="http://yoursite.com/2016/05/23/funny-rules-and-effects/"/>
     <id>http://yoursite.com/2016/05/23/funny-rules-and-effects/</id>
     <published>2016-05-23T11:01:54.000Z</published>
-    <updated>2016-05-24T01:45:23.341Z</updated>
+    <updated>2016-05-24T14:53:56.641Z</updated>
     
     <content type="html">&lt;p&gt;&lt;strong&gt;蓝斯登原则&lt;/strong&gt;&lt;br&gt;在你往上爬的时候，一定要保持梯子的整洁，否则你下来时可能会滑倒。 &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;托利得定理&lt;/strong&gt;&lt;br&gt;测验一个人的智力是否属于上乘，只看脑子里能否同时容纳两种相反的思想，而无碍于其处世行事。 &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;刺猬理论&lt;/strong&gt;&lt;br&gt;刺猬在天冷时彼此靠拢取暖，但保持一定距离，以免互相刺伤。 &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;鲦鱼效应&lt;/strong&gt;&lt;br&gt;鲦鱼因个体弱小而常常群居，并以强健者为自然首领。将一只稍强的鲦鱼脑后控制行为的部分割除后，此鱼便失去自制力，行动也发生紊乱，但其他鲦鱼却仍像从前一样盲目追随。 &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;洛伯定理&lt;/strong&gt;&lt;br&gt;对于一个经理人来说，最要紧的不是你在场时的情况，而是你不在场时发生了什么。 &lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;p&gt;&lt;strong&gt;斯坦纳定理&lt;/strong&gt;&lt;br&gt;在哪里说得愈少，在哪里听到的就愈多。 &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;牢骚效应&lt;/strong&gt;&lt;br&gt;凡是公司中有对工作发牢骚的人，那家公司或老板一定比没有这种人或有这种人而把牢骚埋在肚子里公司要成功得多。 &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;氨基酸组合效应&lt;/strong&gt;&lt;br&gt;组成人体蛋白的八种氨基酸，只要有一种含量不足，其他七种就无法合成蛋白质。 &lt;/p&gt;
@@ -47,7 +123,10 @@
     <summary type="html">
     
       &lt;p&gt;&lt;strong&gt;蓝斯登原则&lt;/strong&gt;&lt;br&gt;在你往上爬的时候，一定要保持梯子的整洁，否则你下来时可能会滑倒。 &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;托利得定理&lt;/strong&gt;&lt;br&gt;测验一个人的智力是否属于上乘，只看脑子里能否同时容纳两种相反的思想，而无碍于其处世行事。
+&lt;p&gt;&lt;strong&gt;托利得定理&lt;/strong&gt;&lt;br&gt;测验一个人的智力是否属于上乘，只看脑子里能否同时容纳两种相反的思想，而无碍于其处世行事。 &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;刺猬理论&lt;/strong&gt;&lt;br&gt;刺猬在天冷时彼此靠拢取暖，但保持一定距离，以免互相刺伤。 &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;鲦鱼效应&lt;/strong&gt;&lt;br&gt;鲦鱼因个体弱小而常常群居，并以强健者为自然首领。将一只稍强的鲦鱼脑后控制行为的部分割除后，此鱼便失去自制力，行动也发生紊乱，但其他鲦鱼却仍像从前一样盲目追随。 &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;洛伯定理&lt;/strong&gt;&lt;br&gt;对于一个经理人来说，最要紧的不是你在场时的情况，而是你不在场时发生了什么。 &lt;/p&gt;
     
     </summary>
     

@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2016/05/24/php-low-layer-interface/</loc>
+    
+    <lastmod>2016-05-24T15:39:43.570Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/05/24/note-about-mysql-multiple-column-indexes/</loc>
+    
+    <lastmod>2016-05-24T15:04:13.255Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2016/05/23/funny-rules-and-effects/</loc>
     
-    <lastmod>2016-05-24T01:45:23.341Z</lastmod>
+    <lastmod>2016-05-24T14:53:56.641Z</lastmod>
     
   </url>
   

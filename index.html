@@ -31,6 +31,104 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-php-low-layer-interface" class="article article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/24/php-low-layer-interface/">PHP底层接口</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/05/24/php-low-layer-interface/" class="article-date">
+  <time datetime="2016-05-24T15:35:56.000Z" itemprop="datePublished">2016-05-24</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/php/">php</a>
+  </div>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>通过继承和实现PHP的底层接口可以统一接口行为，实现底层特性。 </p>
+<p><strong>一，Traversable</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Traversable&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这个接口没有任何方法，它的作用仅仅是作为所有可遍历类的基本接口，不能被实现，只能通过实现Interator或InteratorAggregate而实现。 </p>
+<p><strong>二，Interator </strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Iterator extends Traversable &#123;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> mixed current ( void )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> scalar key ( void )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> void next ( void )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> void rewind ( void )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> boolean valid ( void )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>可实现基本的迭代功能。 </p>
+<p><strong>三，InteratorAggregate </strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">IteratorAggregate extends Traversable &#123;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> Traversable getIterator ( void )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>聚合迭代器，通过部署InteratorAggregate将数据和遍历分离。 </p>
+<p><strong>四，ArrayAccess</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ArrayAccess &#123;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> boolean offsetExists ( mixed $offset )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> mixed offsetGet ( mixed $offset )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> void offsetSet ( mixed $offset , mixed $value )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> void offsetUnset ( mixed $offset )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>可以像数组一样操作自已的类 </p>
+<p><strong>五，Serializable</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Serializable &#123;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> string serialize ( void )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> mixed unserialize ( string $serialized )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>自定义序列化实现 </p>
+<p><strong>六，Countable</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Countable &#123;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> int count ( void )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>实现count计算 </p>
+
+      
+
+      
+        
+    </div>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-note-about-mysql-multiple-column-indexes" class="article article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/24/note-about-mysql-multiple-column-indexes/">MySQL复合索引使用需知</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/05/24/note-about-mysql-multiple-column-indexes/" class="article-date">
+  <time datetime="2016-05-24T14:59:57.000Z" itemprop="datePublished">2016-05-24</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/database/">database</a>
+  </div>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>复合索引</strong> 是指用多个字段创建一条索引；</p>
+<p>使用复合索引的时候，需要了解以下几点： </p>
+<ol>
+<li>MySQL每次查询只能使用一个索引，因此如果多个条件同时查询的频率较高的情况下可以考虑创建复合索引； </li>
+<li>只有当复合索引的第一个字段出现在条件查询中，复合索引才能生效，称为复合索引的前缀性； </li>
+<li>创建了(A, B, C)这样一个复合索引，相当于覆盖了(A, B, C), (A, B), (A)三个索引，即第2点，A必须出现在条件查询中，另外把查询频繁从高到低，对应复合索引字段从左到右排列，称为最佳左前缀特性； </li>
+<li>不要创建过多的索引，一方面参考第1点（每次查询只能使用一个索引），另一方面过多的索引会影响表的更新效率； </li>
+<li>复合索引和其它类型索引各有优势，因此要按实际情况来选择和创建索引； </li>
+</ol>
+
+      
+
+      
+        
+    </div>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-funny-rules-and-effects" class="article article-type-post" itemscope itemprop="blogPost">
   
   <div class="article-inner">
@@ -62,22 +160,11 @@
 <p><strong>刺猬理论</strong><br>刺猬在天冷时彼此靠拢取暖，但保持一定距离，以免互相刺伤。 </p>
 <p><strong>鲦鱼效应</strong><br>鲦鱼因个体弱小而常常群居，并以强健者为自然首领。将一只稍强的鲦鱼脑后控制行为的部分割除后，此鱼便失去自制力，行动也发生紊乱，但其他鲦鱼却仍像从前一样盲目追随。 </p>
 <p><strong>洛伯定理</strong><br>对于一个经理人来说，最要紧的不是你在场时的情况，而是你不在场时发生了什么。 </p>
-<p><strong>斯坦纳定理</strong><br>在哪里说得愈少，在哪里听到的就愈多。 </p>
-<p><strong>牢骚效应</strong><br>凡是公司中有对工作发牢骚的人，那家公司或老板一定比没有这种人或有这种人而把牢骚埋在肚子里公司要成功得多。 </p>
-<p><strong>氨基酸组合效应</strong><br>组成人体蛋白的八种氨基酸，只要有一种含量不足，其他七种就无法合成蛋白质。 </p>
-<p><strong>米格-25效应</strong><br>前苏联研制的米格-25喷气式战斗机的许多零部件与美国的相比都落后，但因设计者考虑了整体性能，故能在升降、速度、应急反应等方面成为当时世界一流。 </p>
-<p><strong>波特定理</strong><br>当遭受许多批评时，下级往往只记住开头的一些，其余就不听了，因为他们忙于思索论据来反驳开头的批评。 </p>
-<p><strong>吉尔伯特法则</strong><br>工作危机最确凿的信号，是没有人跟你说该怎样作。 </p>
-<p><strong>权威暗示效应</strong><br>一化学家称，他将测验一瓶臭气的传播速度，他打开瓶盖15秒后，前排学生即举手，称自己闻到臭气，而后排的人则陆续举手，纷纷称自己也已闻到，其实瓶中什么也没有。 </p>
-<p><strong>定位效应</strong><br>社会心理学家曾作过一个试验：在召开会议时先让人们自由选择位子，之后到室外休息片刻再进入室内入座，如此五至六次，发现大多数人都选择他们第一次坐过的位子。 </p>
-<p><strong>吉格勒定理</strong><br>除了生命本身，没有任何才能不需要后天的锻炼。 </p>
-<p><strong>近因效应</strong><br>最近或最后的印象对人的认知有强烈的影响。 </p>
-<p><strong>酒井法则</strong><br>在招工时用尽浑身解数，使出各种方法，不如使自身成为一个好公司，这样人才自然而然会汇集而来。 </p>
-<p><strong>美即好效应</strong><br>对一个外表英俊漂亮的人，人们很容易误认为他或她的其他方面也很不错。奥格尔维法则：如果我们每个人都雇用比我们自己都更强的人，我们就能成为巨人公司。 </p>
-<p><strong>奥格尔维法则</strong><br>如果我们每个人都雇用比我们自己都更强的人，我们就能成为巨人公司。 </p>
-<p><strong>皮尔卡丹定理</strong><br>用人上一加一不等于二，搞不好等于零。 </p>
-<p><strong>马蝇效应</strong><br>再懒惰的马，只要身上有马蝇叮咬，它也会精神抖擞，飞快奔跑。 </p>
-
+        
+          <p class="article-more-link">
+            <a href="/2016/05/23/funny-rules-and-effects/#more">More...</a>
+          </p>
+        
       
 
       

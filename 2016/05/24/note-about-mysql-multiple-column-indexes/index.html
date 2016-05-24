@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>MySQL复合索引使用需知 | FREDYANG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="复合索引 是指用多个字段创建一条索引；
+使用复合索引的时候，需要了解以下几点： 
+
+MySQL每次查询只能使用一个索引，因此如果多个条件同时查询的频率较高的情况下可以考虑创建复合索引； 
+只有当复合索引的第一个字段出现在条件查询中，复合索引才能生效，称为复合索引的前缀性； 
+创建了(A, B, C)这样一个复合索引，相当于覆盖了(A, B, C), (A, B), (A)三个索引，即第2点，A必须">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL复合索引使用需知">
+<meta property="og:url" content="http://yoursite.com/2016/05/24/note-about-mysql-multiple-column-indexes/index.html">
+<meta property="og:site_name" content="FREDYANG">
+<meta property="og:description" content="复合索引 是指用多个字段创建一条索引；
+使用复合索引的时候，需要了解以下几点： 
+
+MySQL每次查询只能使用一个索引，因此如果多个条件同时查询的频率较高的情况下可以考虑创建复合索引； 
+只有当复合索引的第一个字段出现在条件查询中，复合索引才能生效，称为复合索引的前缀性； 
+创建了(A, B, C)这样一个复合索引，相当于覆盖了(A, B, C), (A, B), (A)三个索引，即第2点，A必须">
+<meta property="og:updated_time" content="2016-05-24T15:04:13.255Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MySQL复合索引使用需知">
+<meta name="twitter:description" content="复合索引 是指用多个字段创建一条索引；
+使用复合索引的时候，需要了解以下几点： 
+
+MySQL每次查询只能使用一个索引，因此如果多个条件同时查询的频率较高的情况下可以考虑创建复合索引； 
+只有当复合索引的第一个字段出现在条件查询中，复合索引才能生效，称为复合索引的前缀性； 
+创建了(A, B, C)这样一个复合索引，相当于覆盖了(A, B, C), (A, B), (A)三个索引，即第2点，A必须">
+  
+    <link rel="alternative" href="/atom.xml" title="FREDYANG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <section id="main"><article id="post-note-about-mysql-multiple-column-indexes" class="article article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MySQL复合索引使用需知
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/05/24/note-about-mysql-multiple-column-indexes/" class="article-date">
+  <time datetime="2016-05-24T14:59:57.000Z" itemprop="datePublished">2016-05-24</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/database/">database</a>
+  </div>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>复合索引</strong> 是指用多个字段创建一条索引；</p>
+<p>使用复合索引的时候，需要了解以下几点： </p>
+<ol>
+<li>MySQL每次查询只能使用一个索引，因此如果多个条件同时查询的频率较高的情况下可以考虑创建复合索引； </li>
+<li>只有当复合索引的第一个字段出现在条件查询中，复合索引才能生效，称为复合索引的前缀性； </li>
+<li>创建了(A, B, C)这样一个复合索引，相当于覆盖了(A, B, C), (A, B), (A)三个索引，即第2点，A必须出现在条件查询中，另外把查询频繁从高到低，对应复合索引字段从左到右排列，称为最佳左前缀特性； </li>
+<li>不要创建过多的索引，一方面参考第1点（每次查询只能使用一个索引），另一方面过多的索引会影响表的更新效率； </li>
+<li>复合索引和其它类型索引各有优势，因此要按实际情况来选择和创建索引； </li>
+</ol>
+
+      
+
+      
+        
+    </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/05/24/php-low-layer-interface/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          PHP底层接口
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/23/funny-rules-and-effects/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">有意思的定理和法则</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="post-note-about-mysql-multiple-column-indexes" data-title="MySQL复合索引使用需知" data-url="http://yoursite.com/2016/05/24/note-about-mysql-multiple-column-indexes/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"fredyang"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+</section>
+</section>
+        <aside id="sidebar">
+  <nav class="menus">
+  	<ul>
+  		<li><a href="/"><i class="icon icon-home"></i></a></li>
+  		
+			<li><a href="/archives"><i class="icon icon-fenlei"></i></a></li>
+  		
+  		
+			<li><a href="/tags"><i class="icon icon-tag"></i></a></li>
+  		
+  		
+  			<li><a href="https://github.com/" target="_blank"><i class="icon icon-github"></i></a></li>
+  		
+  	</ul>
+  </nav>
+  <a id="go-top" href="#"><i class="icon icon-up"></i></a>
+</aside>
+      </div>
+      <footer id="footer">
+  
+	<div id="footer-info" class="inner">
+	  &copy; 2016 Fredyang 
+	  - Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	  - Theme <a href="https://github.com/Alex-fun/hexo-theme-jane/" target="_blank">Jane</a>
+	</div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tag</a>
+  
+    <a href="https://github.com/" class="mobile-nav-link">Github</a>
+  
+</nav>
+    
+
+<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

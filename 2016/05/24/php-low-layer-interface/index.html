@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>PHP底层接口 | FREDYANG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="通过继承和实现PHP的底层接口可以统一接口行为，实现底层特性。 
+一，Traversable12Traversable&amp;#123;&amp;#125;
+这个接口没有任何方法，它的作用仅仅是作为所有可遍历类的基本接口，不能被实现，只能通过实现Interator或InteratorAggregate而实现。 
+二，Interator 1234567Iterator extends Traversable &amp;#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP底层接口">
+<meta property="og:url" content="http://yoursite.com/2016/05/24/php-low-layer-interface/index.html">
+<meta property="og:site_name" content="FREDYANG">
+<meta property="og:description" content="通过继承和实现PHP的底层接口可以统一接口行为，实现底层特性。 
+一，Traversable12Traversable&amp;#123;&amp;#125;
+这个接口没有任何方法，它的作用仅仅是作为所有可遍历类的基本接口，不能被实现，只能通过实现Interator或InteratorAggregate而实现。 
+二，Interator 1234567Iterator extends Traversable &amp;#">
+<meta property="og:updated_time" content="2016-05-24T15:39:43.570Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP底层接口">
+<meta name="twitter:description" content="通过继承和实现PHP的底层接口可以统一接口行为，实现底层特性。 
+一，Traversable12Traversable&amp;#123;&amp;#125;
+这个接口没有任何方法，它的作用仅仅是作为所有可遍历类的基本接口，不能被实现，只能通过实现Interator或InteratorAggregate而实现。 
+二，Interator 1234567Iterator extends Traversable &amp;#">
+  
+    <link rel="alternative" href="/atom.xml" title="FREDYANG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <section id="main"><article id="post-php-low-layer-interface" class="article article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      PHP底层接口
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/05/24/php-low-layer-interface/" class="article-date">
+  <time datetime="2016-05-24T15:35:56.000Z" itemprop="datePublished">2016-05-24</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/php/">php</a>
+  </div>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>通过继承和实现PHP的底层接口可以统一接口行为，实现底层特性。 </p>
+<p><strong>一，Traversable</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Traversable&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这个接口没有任何方法，它的作用仅仅是作为所有可遍历类的基本接口，不能被实现，只能通过实现Interator或InteratorAggregate而实现。 </p>
+<p><strong>二，Interator </strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Iterator extends Traversable &#123;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> mixed current ( void )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> scalar key ( void )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> void next ( void )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> void rewind ( void )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> boolean valid ( void )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>可实现基本的迭代功能。 </p>
+<p><strong>三，InteratorAggregate </strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">IteratorAggregate extends Traversable &#123;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> Traversable getIterator ( void )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>聚合迭代器，通过部署InteratorAggregate将数据和遍历分离。 </p>
+<p><strong>四，ArrayAccess</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ArrayAccess &#123;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> boolean offsetExists ( mixed $offset )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> mixed offsetGet ( mixed $offset )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> void offsetSet ( mixed $offset , mixed $value )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> void offsetUnset ( mixed $offset )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>可以像数组一样操作自已的类 </p>
+<p><strong>五，Serializable</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Serializable &#123;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> string serialize ( void )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> mixed unserialize ( string $serialized )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>自定义序列化实现 </p>
+<p><strong>六，Countable</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Countable &#123;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> int count ( void )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>实现count计算 </p>
+
+      
+
+      
+        
+    </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/05/24/note-about-mysql-multiple-column-indexes/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">MySQL复合索引使用需知</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="post-php-low-layer-interface" data-title="PHP底层接口" data-url="http://yoursite.com/2016/05/24/php-low-layer-interface/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"fredyang"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+</section>
+</section>
+        <aside id="sidebar">
+  <nav class="menus">
+  	<ul>
+  		<li><a href="/"><i class="icon icon-home"></i></a></li>
+  		
+			<li><a href="/archives"><i class="icon icon-fenlei"></i></a></li>
+  		
+  		
+			<li><a href="/tags"><i class="icon icon-tag"></i></a></li>
+  		
+  		
+  			<li><a href="https://github.com/" target="_blank"><i class="icon icon-github"></i></a></li>
+  		
+  	</ul>
+  </nav>
+  <a id="go-top" href="#"><i class="icon icon-up"></i></a>
+</aside>
+      </div>
+      <footer id="footer">
+  
+	<div id="footer-info" class="inner">
+	  &copy; 2016 Fredyang 
+	  - Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	  - Theme <a href="https://github.com/Alex-fun/hexo-theme-jane/" target="_blank">Jane</a>
+	</div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tag</a>
+  
+    <a href="https://github.com/" class="mobile-nav-link">Github</a>
+  
+</nav>
+    
+
+<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
