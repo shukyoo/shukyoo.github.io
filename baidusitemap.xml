@@ -4,8 +4,87 @@
 
     
   <url>
+    <loc>http://fredyang.com/2016/05/25/coding-philosophy/</loc>
+    <lastmod>2016-05-25T13:40:40.187Z</lastmod>
+    <data>
+        <display>
+        <title>编程哲言</title>
+        <pubTime>2016-05-25T13:37:55.000Z</pubTime>
+        
+        <tag>philosophy</tag>
+         
+         
+           
+             
+              <breadCrumb title="Thinking" url="http://fredyang.com/categories/Thinking/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fredyang.com/2016/05/25/php-code-standard-essential/</loc>
+    <lastmod>2016-05-25T13:07:15.843Z</lastmod>
+    <data>
+        <display>
+        <title>PHP代码规范精要</title>
+        <pubTime>2016-05-25T01:23:41.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>code standard</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://fredyang.com/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fredyang.com/2016/05/22/hello-my-first-post/</loc>
+    <lastmod>2016-05-25T01:15:32.233Z</lastmod>
+    <data>
+        <display>
+        <title>hello my first post</title>
+        <pubTime>2016-05-22T12:11:33.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fredyang.com/2016/05/23/funny-rules-and-effects/</loc>
+    <lastmod>2016-05-25T01:14:25.958Z</lastmod>
+    <data>
+        <display>
+        <title>有意思的定理和法则</title>
+        <pubTime>2016-05-23T11:01:54.000Z</pubTime>
+        
+        <tag>social</tag>
+         
+        <tag>psychological</tag>
+         
+         
+           
+             
+              <breadCrumb title="Thinking" url="http://fredyang.com/categories/Thinking/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://fredyang.com/2016/05/24/php-low-layer-interface/</loc>
-    <lastmod>2016-05-24T15:39:43.570Z</lastmod>
+    <lastmod>2016-05-25T01:14:02.387Z</lastmod>
     <data>
         <display>
         <title>PHP底层接口</title>
@@ -18,7 +97,7 @@
          
            
              
-              <breadCrumb title="php" url="http://fredyang.com/categories/php/"/>
+              <breadCrumb title="PHP" url="http://fredyang.com/categories/PHP/"/>
           
         </display>
     </data>
@@ -27,7 +106,7 @@
     
   <url>
     <loc>http://fredyang.com/2016/05/24/note-about-mysql-multiple-column-indexes/</loc>
-    <lastmod>2016-05-24T15:04:13.255Z</lastmod>
+    <lastmod>2016-05-25T01:11:49.641Z</lastmod>
     <data>
         <display>
         <title>MySQL复合索引使用需知</title>
@@ -40,57 +119,13 @@
          
            
              
-              <breadCrumb title="database" url="http://fredyang.com/categories/database/"/>
+              <breadCrumb title="Database" url="http://fredyang.com/categories/Database/"/>
           
         </display>
     </data>
     </url>
 
     
-  <url>
-    <loc>http://fredyang.com/2016/05/23/funny-rules-and-effects/</loc>
-    <lastmod>2016-05-24T14:53:56.641Z</lastmod>
-    <data>
-        <display>
-        <title>有意思的定理和法则</title>
-        <pubTime>2016-05-23T11:01:54.000Z</pubTime>
-        
-        <tag>Social</tag>
-         
-        <tag>Psychological</tag>
-         
-         
-           
-             
-              <breadCrumb title="Thinking" url="http://fredyang.com/categories/Thinking/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>http://fredyang.com/2016/05/22/hello-my-first-post/</loc>
-    <lastmod>2016-05-22T16:08:31.967Z</lastmod>
-    <data>
-        <display>
-        <title>hello my first post</title>
-        <pubTime>2016-05-22T12:11:33.000Z</pubTime>
-        
-        <tag>hello</tag>
-         
-        <tag>test</tag>
-         
-         
-           
-             
-              <breadCrumb title="test" url="http://fredyang.com/categories/test/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
     
   <url>

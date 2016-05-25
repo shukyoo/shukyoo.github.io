@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://fredyang.com/"/>
-  <updated>2016-05-24T15:39:43.570Z</updated>
+  <updated>2016-05-25T13:40:40.187Z</updated>
   <id>http://fredyang.com/</id>
   
   <author>
@@ -16,11 +16,148 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>编程哲言</title>
+    <link href="http://fredyang.com/2016/05/25/coding-philosophy/"/>
+    <id>http://fredyang.com/2016/05/25/coding-philosophy/</id>
+    <published>2016-05-25T13:37:55.000Z</published>
+    <updated>2016-05-25T13:40:40.187Z</updated>
+    
+    <content type="html">&lt;p&gt;Premature optimization is the root of all evil&lt;br&gt;过早优化是万恶之源&lt;/p&gt;
+&lt;p&gt;Walking on water and developing software from a specification are easy if both are frozen&lt;br&gt;在水上行走和按需求开发软件将都会很容易，如果这两者都是冻结的话&lt;/p&gt;
+&lt;p&gt;It always takes longer than you expect, even when you take into account Hofstadter’s Law&lt;br&gt;侯世达定律: 做事所花费的时间总是比你预期的要长，即使你的预期中考虑了侯世达定律&lt;/p&gt;
+&lt;p&gt;Some people, when confronted with a problem, think “I know, I’ll use regular expressions.” Now they have two problems&lt;br&gt;如果碰到一个问题，心里在想“我知道这个问题，我将会用正则表达式来解决它”，那么接下来他将面对两个问题。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it&lt;br&gt;Debug的难度是写代码的两倍，如果你把代码写得足够的清楚，那么你在debug的时候就不需要很花脑筋&lt;/p&gt;
+&lt;p&gt;Measuring programming progress by lines of code is like measuring aircraft building progress by weight&lt;br&gt;用代码量来衡量开发进度，那就像用重量来衡量造飞机的进度一样&lt;/p&gt;
+&lt;p&gt;PHP is a minor evil perpetrated and created by incompetent amateurs, whereas Perl is a great and insidious evil, perpetrated by skilled but perverted professionals&lt;br&gt;PHP被业余人员变成了一个小恶魔，而Perl被一些专业的但是不正当的人变成了一个大恶魔&lt;/p&gt;
+&lt;p&gt;On two occasions I have been asked, ‘Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out?’ I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question.&lt;br&gt;两次我都被问到“如果你给机器输入了错误的数据，那么能得到正确的结果吗？”，我并不能很好的领会这种想法。&lt;br&gt;（程序需要有纠错能力吗？）&lt;/p&gt;
+&lt;p&gt;Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live&lt;br&gt;我们在写代码的时候一定要想着以后维护这些代码的人可能是个疯狂的精神病，而且他还知道你住在哪里。&lt;/p&gt;
+&lt;p&gt;Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning.&lt;br&gt;程序员在建造更大更傻瓜化的程序，跟世界在产生更多更傻的人是一种竞赛，目前为止世界领先。&lt;/p&gt;
+&lt;p&gt;I don’t care if it works on your machine! We are not shipping your machine!&lt;br&gt;我不关心它是否能在你的机器上运行，我们不会给你提供机器。&lt;/p&gt;
+&lt;p&gt;I have always wished for my computer to be as easy to use as my telephone; my wish has come true because I can no longer figure out how to use my telephone.&lt;br&gt;我以前总是希望用电脑跟用电话一样简单；现在我的愿望已经成真了，因为我现在已经不知道怎么用电话了。&lt;/p&gt;
+&lt;p&gt;A computer lets you make more mistakes faster than any other invention in human history, with the possible exceptions of handguns and tequila.&lt;br&gt;电脑让人们所犯的错误比其它有史以来所有的发明让人们犯的错误更多更快，同样包括手枪和龙舌兰酒的缺陷。 &lt;/p&gt;
+&lt;p&gt;If debugging is the process of removing software bugs, then programming must be the process of putting them in.&lt;br&gt;如果debug是消灭bug的流程，那么编程就是生产bug的流程&lt;/p&gt;
+&lt;p&gt;It is practically impossible to teach good programming style to students that have had prior exposure to BASIC. As potential programmers, they are mentally mutilated beyond hope of regeneration.&lt;br&gt;教一群已经被BASIC语言污染的学生一种好的编程风格是不可能的。这对于有潜力的程序员来说，他们所受到的智力上的伤害比重建信心更严重。&lt;/p&gt;
+&lt;p&gt;In theory, theory and practice are the same. In practice, they’re not.&lt;br&gt;理论上说，理论和实践是一样的；但是实际上，这两者并不一样；&lt;/p&gt;
+&lt;p&gt;Two things are infinite: the universe and human stupidity; and I’m not sure about the universe.&lt;br&gt;有两样东西是无穷的，宇宙和人类的愚蠢；而我还不能肯定宇宙是无穷的。&lt;/p&gt;
+&lt;p&gt;Perl - The only language that looks the same before and after RSA encryption.&lt;br&gt;Perl，唯一一种看起来像被RSA加密过一样的语言；&lt;/p&gt;
+&lt;p&gt;I love deadlines. I like the whooshing sound they make as they fly by.&lt;br&gt;我喜欢截至日期。我喜欢这种像飞过一样的嗖嗖嗖的声音；&lt;/p&gt;
+&lt;p&gt;Saying that Java is good because it works on all platforms is like saying anal sex is good because it works on all genders.&lt;br&gt;说JAVA好是因为它能在所有的平台上运行，就好像说“肛交”好，因为它适合所有的性别。&lt;/p&gt;
+&lt;p&gt;XML is like violence - if it doesn’t solve your problems, you are not using enough of it.&lt;br&gt;XML就像一种暴力侵犯 - 如果它不能解决你的问题，那只能说明你没有用好它。&lt;/p&gt;
+&lt;p&gt;Einstein argued that there must be simplified explanations of nature, because God is not capricious or arbitrary. No such faith comforts the software engineer.&lt;br&gt;爱因斯坦说，自然界里的一切都一定有一个简单的法则，因为上帝并不是任性的。但是对程序员来说并不存在这样舒适的信仰。 &lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Premature optimization is the root of all evil&lt;br&gt;过早优化是万恶之源&lt;/p&gt;
+&lt;p&gt;Walking on water and developing software from a specification are easy if both are frozen&lt;br&gt;在水上行走和按需求开发软件将都会很容易，如果这两者都是冻结的话&lt;/p&gt;
+&lt;p&gt;It always takes longer than you expect, even when you take into account Hofstadter’s Law&lt;br&gt;侯世达定律: 做事所花费的时间总是比你预期的要长，即使你的预期中考虑了侯世达定律&lt;/p&gt;
+&lt;p&gt;Some people, when confronted with a problem, think “I know, I’ll use regular expressions.” Now they have two problems&lt;br&gt;如果碰到一个问题，心里在想“我知道这个问题，我将会用正则表达式来解决它”，那么接下来他将面对两个问题。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Thinking" scheme="http://fredyang.com/categories/Thinking/"/>
+    
+    
+      <category term="philosophy" scheme="http://fredyang.com/tags/philosophy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PHP代码规范精要</title>
+    <link href="http://fredyang.com/2016/05/25/php-code-standard-essential/"/>
+    <id>http://fredyang.com/2016/05/25/php-code-standard-essential/</id>
+    <published>2016-05-25T01:23:41.000Z</published>
+    <updated>2016-05-25T13:07:15.843Z</updated>
+    
+    <content type="html">&lt;p&gt;PHP详细代码规范建议参考PHP FIG的PSR-0, PSR-1, PSR-2, PSR-3, PSR-4的相关规范文档，具体参考网站：&lt;br&gt;&lt;a href=&quot;http://www.php-fig.org/&quot; title=&quot;PHP FIG官网&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PHP FIG官网&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/php-fig/fig-standards&quot; title=&quot;FIG-Standards in github&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;FIG-Standards in github&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/hfcorriez/fig-standards&quot; title=&quot;fig-standards中文翻译&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;fig-standards中文翻译&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;以下是我参考相关文档和开源代码，并结合自身的开发实践，作的PHP代码规范提炼和精简。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例代码&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;69&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;70&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;71&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;72&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;73&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;74&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;75&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;76&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;App&lt;/span&gt;\&lt;span class=&quot;title&quot;&gt;Test&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Yii&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;helpers&lt;/span&gt;\&lt;span class=&quot;title&quot;&gt;Helper&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; * 一些说明&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;HelloWorldTest&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; KIND_ = &lt;span class=&quot;string&quot;&gt;&#39;red&#39;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; COLOR_BLUE = &lt;span class=&quot;string&quot;&gt;&#39;blue&#39;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; $user_name;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;protected&lt;/span&gt; $_age;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;/**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     * 方法注释&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getUserAge&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        $test_var = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;_age;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!$test_var) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            $test_var = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; $test_var;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;/**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     * 方法注释&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     * &lt;span class=&quot;doctag&quot;&gt;@param&lt;/span&gt; array $test_arr&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     * &lt;span class=&quot;doctag&quot;&gt;@return&lt;/span&gt; array&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;_testSomething&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(array $test_arr)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        $result = [];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;foreach&lt;/span&gt; ($test_arr &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; $k =&amp;gt; $item) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ($k &amp;gt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                $result[] = $item;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; $result;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; * 函数说明&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;check_number_valid&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;($call)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    $number = $call();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; ($number &amp;gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; * 匿名函数调用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;check_number_valid(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 常量声明&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;define(&lt;span class=&quot;string&quot;&gt;&#39;MY_TEST_NAME&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;aaa&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 变量使用&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$hello_test = &lt;span class=&quot;string&quot;&gt;&#39;hello&#39;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$hello_str = &lt;span class=&quot;string&quot;&gt;&#39;say &#39;&lt;/span&gt;. $hello_test .&lt;span class=&quot;string&quot;&gt;&#39; world&#39;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$test_arr = [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$test_long_arr = &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;kk_aa&#39;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;number&quot;&gt;11&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;kk_bb&#39;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;number&quot;&gt;22&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;kk_cc&#39;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;number&quot;&gt;33&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;文字说明&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;基础：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;只允许&amp;lt;?php或&amp;lt;?=，不允许&amp;lt;?短标记；&lt;/li&gt;
+&lt;li&gt;如果是纯PHP代码，则结尾不加?&amp;gt;标记（官方推荐，防止意外输出）；&lt;/li&gt;
+&lt;li&gt;行尾不要有空格；&lt;/li&gt;
+&lt;li&gt;文件使用UTF-8编码，去除BOM；&lt;/li&gt;
+&lt;li&gt;使用4个空格代替Tab缩进（在IDE里设置缩进选项）；&lt;/li&gt;
+&lt;li&gt;所有类、方法或变量等的命名都以英文意义命名，名称要直观有意义；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;命名空间：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;命名空间要跟目录结构保持一致；&lt;/li&gt;
+&lt;li&gt;命名空间声明在第一行；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;类：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;文件名跟类名一致；&lt;/li&gt;
+&lt;li&gt;每个单词首字母大写；&lt;/li&gt;
+&lt;li&gt;大括号新起一行；&lt;/li&gt;
+&lt;li&gt;类注释在class上面，非必需；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;类常量和属性：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;类常量全大写，用下划线分隔；&lt;/li&gt;
+&lt;li&gt;类属性全小写，下划线分隔；&lt;/li&gt;
+&lt;li&gt;如果是protected或private则以下划线开头；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;方法：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;第一个单词小写，之后每个单词首字母大写；&lt;/li&gt;
+&lt;li&gt;protected或private方法名以下划线开头；&lt;/li&gt;
+&lt;li&gt;大括号新起一行；&lt;/li&gt;
+&lt;li&gt;方法跟方法之间至少有一行的分隔空间；&lt;/li&gt;
+&lt;li&gt;方法说明注释；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;函数和匿名函数：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;函数命名全小写，下划线分隔；&lt;/li&gt;
+&lt;li&gt;函数的大括号新起一行；&lt;/li&gt;
+&lt;li&gt;匿名函数大括号在本行；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;变量和常量：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;变量命名全小写，下划线分隔；&lt;/li&gt;
+&lt;li&gt;常量命名全大写，下划线分隔；&lt;/li&gt;
+&lt;li&gt;字符串使用单引号，除非包含变量或其它特殊情况；&lt;/li&gt;
+&lt;li&gt;字符串连接的点，两边加空格；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;数组：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;短数据写在一行；&lt;/li&gt;
+&lt;li&gt;长数据写多行，一行一个元素，箭头两边加上空格；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;控制：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;大括号在同一行开始，结束大括号在新一行；&lt;/li&gt;
+&lt;li&gt;都要加上大括号，哪怕只有一行语句；&lt;/li&gt;
+&lt;li&gt;条件声明，括号两边要加空格，比如 if ($a == 1) {&lt;/li&gt;
+&lt;li&gt;等号赋值或双等号判断等两边要有空格；&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;PHP详细代码规范建议参考PHP FIG的PSR-0, PSR-1, PSR-2, PSR-3, PSR-4的相关规范文档，具体参考网站：&lt;br&gt;&lt;a href=&quot;http://www.php-fig.org/&quot; title=&quot;PHP FIG官网&quot; target=&quot;_bla
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://fredyang.com/categories/PHP/"/>
+    
+    
+      <category term="php" scheme="http://fredyang.com/tags/php/"/>
+    
+      <category term="code standard" scheme="http://fredyang.com/tags/code-standard/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PHP底层接口</title>
     <link href="http://fredyang.com/2016/05/24/php-low-layer-interface/"/>
     <id>http://fredyang.com/2016/05/24/php-low-layer-interface/</id>
     <published>2016-05-24T15:35:56.000Z</published>
-    <updated>2016-05-24T15:39:43.570Z</updated>
+    <updated>2016-05-25T01:14:02.387Z</updated>
     
     <content type="html">&lt;p&gt;通过继承和实现PHP的底层接口可以统一接口行为，实现底层特性。 &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;一，Traversable&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Traversable&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
@@ -44,7 +181,7 @@
     
     </summary>
     
-      <category term="php" scheme="http://fredyang.com/categories/php/"/>
+      <category term="PHP" scheme="http://fredyang.com/categories/PHP/"/>
     
     
       <category term="php" scheme="http://fredyang.com/tags/php/"/>
@@ -58,7 +195,7 @@
     <link href="http://fredyang.com/2016/05/24/note-about-mysql-multiple-column-indexes/"/>
     <id>http://fredyang.com/2016/05/24/note-about-mysql-multiple-column-indexes/</id>
     <published>2016-05-24T14:59:57.000Z</published>
-    <updated>2016-05-24T15:04:13.255Z</updated>
+    <updated>2016-05-25T01:11:49.641Z</updated>
     
     <content type="html">&lt;p&gt;&lt;strong&gt;复合索引&lt;/strong&gt; 是指用多个字段创建一条索引；&lt;/p&gt;
 &lt;p&gt;使用复合索引的时候，需要了解以下几点： &lt;/p&gt;
@@ -81,7 +218,7 @@
     
     </summary>
     
-      <category term="database" scheme="http://fredyang.com/categories/database/"/>
+      <category term="Database" scheme="http://fredyang.com/categories/Database/"/>
     
     
       <category term="mysql" scheme="http://fredyang.com/tags/mysql/"/>
@@ -95,7 +232,7 @@
     <link href="http://fredyang.com/2016/05/23/funny-rules-and-effects/"/>
     <id>http://fredyang.com/2016/05/23/funny-rules-and-effects/</id>
     <published>2016-05-23T11:01:54.000Z</published>
-    <updated>2016-05-24T14:53:56.641Z</updated>
+    <updated>2016-05-25T01:14:25.958Z</updated>
     
     <content type="html">&lt;p&gt;&lt;strong&gt;蓝斯登原则&lt;/strong&gt;&lt;br&gt;在你往上爬的时候，一定要保持梯子的整洁，否则你下来时可能会滑倒。 &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;托利得定理&lt;/strong&gt;&lt;br&gt;测验一个人的智力是否属于上乘，只看脑子里能否同时容纳两种相反的思想，而无碍于其处世行事。 &lt;/p&gt;
@@ -133,9 +270,9 @@
       <category term="Thinking" scheme="http://fredyang.com/categories/Thinking/"/>
     
     
-      <category term="Social" scheme="http://fredyang.com/tags/Social/"/>
+      <category term="social" scheme="http://fredyang.com/tags/social/"/>
     
-      <category term="Psychological" scheme="http://fredyang.com/tags/Psychological/"/>
+      <category term="psychological" scheme="http://fredyang.com/tags/psychological/"/>
     
   </entry>
   
@@ -144,7 +281,7 @@
     <link href="http://fredyang.com/2016/05/22/hello-my-first-post/"/>
     <id>http://fredyang.com/2016/05/22/hello-my-first-post/</id>
     <published>2016-05-22T12:11:33.000Z</published>
-    <updated>2016-05-22T16:08:31.967Z</updated>
+    <updated>2016-05-25T01:15:32.233Z</updated>
     
     <content type="html">&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;hello world&#39;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;img title=&quot;图片标题&quot; alt=&quot;图片说明&quot; class=&quot;class1 class2&quot; src=&quot;http://7vzt25.com1.z0.glb.clouddn.com/static/images/test.png&quot;&gt;
@@ -157,12 +294,6 @@
     
     </summary>
     
-      <category term="test" scheme="http://fredyang.com/categories/test/"/>
-    
-    
-      <category term="hello" scheme="http://fredyang.com/tags/hello/"/>
-    
-      <category term="test" scheme="http://fredyang.com/tags/test/"/>
     
   </entry>
   

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>PHP代码规范精要 | FREDYANG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="PHP详细代码规范建议参考PHP FIG的PSR-0, PSR-1, PSR-2, PSR-3, PSR-4的相关规范文档，具体参考网站：PHP FIG官网FIG-Standards in githubfig-standards中文翻译
+以下是我参考相关文档和开源代码，并结合自身的开发实践，作的PHP代码规范提炼和精简。
+示例代码
+123456789101112131415161718192021">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP代码规范精要">
+<meta property="og:url" content="http://fredyang.com/2016/05/25/php-code-standard-essential/index.html">
+<meta property="og:site_name" content="FREDYANG">
+<meta property="og:description" content="PHP详细代码规范建议参考PHP FIG的PSR-0, PSR-1, PSR-2, PSR-3, PSR-4的相关规范文档，具体参考网站：PHP FIG官网FIG-Standards in githubfig-standards中文翻译
+以下是我参考相关文档和开源代码，并结合自身的开发实践，作的PHP代码规范提炼和精简。
+示例代码
+123456789101112131415161718192021">
+<meta property="og:updated_time" content="2016-05-25T13:07:15.843Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP代码规范精要">
+<meta name="twitter:description" content="PHP详细代码规范建议参考PHP FIG的PSR-0, PSR-1, PSR-2, PSR-3, PSR-4的相关规范文档，具体参考网站：PHP FIG官网FIG-Standards in githubfig-standards中文翻译
+以下是我参考相关文档和开源代码，并结合自身的开发实践，作的PHP代码规范提炼和精简。
+示例代码
+123456789101112131415161718192021">
+  
+    <link rel="alternative" href="/atom.xml" title="FREDYANG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <section id="main"><article id="post-php-code-standard-essential" class="article article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      PHP代码规范精要
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/05/25/php-code-standard-essential/" class="article-date">
+  <time datetime="2016-05-25T01:23:41.000Z" itemprop="datePublished">2016-05-25</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/PHP/">PHP</a>
+  </div>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>PHP详细代码规范建议参考PHP FIG的PSR-0, PSR-1, PSR-2, PSR-3, PSR-4的相关规范文档，具体参考网站：<br><a href="http://www.php-fig.org/" title="PHP FIG官网" target="_blank" rel="external">PHP FIG官网</a><br><a href="https://github.com/php-fig/fig-standards" title="FIG-Standards in github" target="_blank" rel="external">FIG-Standards in github</a><br><a href="https://github.com/hfcorriez/fig-standards" title="fig-standards中文翻译" target="_blank" rel="external">fig-standards中文翻译</a></p>
+<p>以下是我参考相关文档和开源代码，并结合自身的开发实践，作的PHP代码规范提炼和精简。</p>
+<p><strong>示例代码</strong></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">namespace</span> <span class="title">App</span>\<span class="title">Test</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">use</span> <span class="title">Yii</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">helpers</span>\<span class="title">Helper</span>;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * 一些说明</span><br><span class="line"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloWorldTest</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> KIND_ = <span class="string">'red'</span>;</span><br><span class="line">    <span class="keyword">const</span> COLOR_BLUE = <span class="string">'blue'</span>;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">public</span> $user_name;</span><br><span class="line">    <span class="keyword">protected</span> $_age;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * 方法注释</span><br><span class="line">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getUserAge</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        $test_var = <span class="keyword">$this</span>-&gt;_age;</span><br><span class="line">        <span class="keyword">if</span> (!$test_var) &#123;</span><br><span class="line">            $test_var = <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> $test_var;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * 方法注释</span><br><span class="line">     * <span class="doctag">@param</span> array $test_arr</span><br><span class="line">     * <span class="doctag">@return</span> array</span><br><span class="line">     */</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">_testSomething</span><span class="params">(array $test_arr)</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        $result = [];</span><br><span class="line">        <span class="keyword">foreach</span> ($test_arr <span class="keyword">as</span> $k =&gt; $item) &#123;</span><br><span class="line">            <span class="keyword">if</span> ($k &gt; <span class="number">2</span>) &#123;</span><br><span class="line">                $result[] = $item;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> $result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * 函数说明</span><br><span class="line"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">check_number_valid</span><span class="params">($call)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    $number = $call();</span><br><span class="line">    <span class="keyword">return</span> ($number &gt; <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * 匿名函数调用</span><br><span class="line"> */</span></span><br><span class="line">check_number_valid(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">10</span>;</span><br><span class="line">&#125;);</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">// 常量声明</span></span><br><span class="line">define(<span class="string">'MY_TEST_NAME'</span>, <span class="string">'aaa'</span>);</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 变量使用</span></span><br><span class="line">$hello_test = <span class="string">'hello'</span>;</span><br><span class="line">$hello_str = <span class="string">'say '</span>. $hello_test .<span class="string">' world'</span>;</span><br><span class="line">$test_arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">$test_long_arr = <span class="keyword">array</span>(</span><br><span class="line">    <span class="string">'kk_aa'</span> =&gt; <span class="number">11</span>,</span><br><span class="line">    <span class="string">'kk_bb'</span> =&gt; <span class="number">22</span>,</span><br><span class="line">    <span class="string">'kk_cc'</span> =&gt; <span class="number">33</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p><strong>文字说明</strong></p>
+<p>基础：</p>
+<ol>
+<li>只允许&lt;?php或&lt;?=，不允许&lt;?短标记；</li>
+<li>如果是纯PHP代码，则结尾不加?&gt;标记（官方推荐，防止意外输出）；</li>
+<li>行尾不要有空格；</li>
+<li>文件使用UTF-8编码，去除BOM；</li>
+<li>使用4个空格代替Tab缩进（在IDE里设置缩进选项）；</li>
+<li>所有类、方法或变量等的命名都以英文意义命名，名称要直观有意义；</li>
+</ol>
+<p>命名空间：</p>
+<ol>
+<li>命名空间要跟目录结构保持一致；</li>
+<li>命名空间声明在第一行；</li>
+</ol>
+<p>类：</p>
+<ol>
+<li>文件名跟类名一致；</li>
+<li>每个单词首字母大写；</li>
+<li>大括号新起一行；</li>
+<li>类注释在class上面，非必需；</li>
+</ol>
+<p>类常量和属性：</p>
+<ol>
+<li>类常量全大写，用下划线分隔；</li>
+<li>类属性全小写，下划线分隔；</li>
+<li>如果是protected或private则以下划线开头；</li>
+</ol>
+<p>方法：</p>
+<ol>
+<li>第一个单词小写，之后每个单词首字母大写；</li>
+<li>protected或private方法名以下划线开头；</li>
+<li>大括号新起一行；</li>
+<li>方法跟方法之间至少有一行的分隔空间；</li>
+<li>方法说明注释；</li>
+</ol>
+<p>函数和匿名函数：</p>
+<ol>
+<li>函数命名全小写，下划线分隔；</li>
+<li>函数的大括号新起一行；</li>
+<li>匿名函数大括号在本行；</li>
+</ol>
+<p>变量和常量：</p>
+<ol>
+<li>变量命名全小写，下划线分隔；</li>
+<li>常量命名全大写，下划线分隔；</li>
+<li>字符串使用单引号，除非包含变量或其它特殊情况；</li>
+<li>字符串连接的点，两边加空格；</li>
+</ol>
+<p>数组：</p>
+<ol>
+<li>短数据写在一行；</li>
+<li>长数据写多行，一行一个元素，箭头两边加上空格；</li>
+</ol>
+<p>控制：</p>
+<ol>
+<li>大括号在同一行开始，结束大括号在新一行；</li>
+<li>都要加上大括号，哪怕只有一行语句；</li>
+<li>条件声明，括号两边要加空格，比如 if ($a == 1) {</li>
+<li>等号赋值或双等号判断等两边要有空格；</li>
+</ol>
+
+      
+
+      
+        
+    </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/05/25/coding-philosophy/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          编程哲言
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/24/php-low-layer-interface/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">PHP底层接口</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="post-php-code-standard-essential" data-title="PHP代码规范精要" data-url="http://fredyang.com/2016/05/25/php-code-standard-essential/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"fredyang"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+</section>
+</section>
+        <aside id="sidebar">
+  <nav class="menus">
+  	<ul>
+  		<li><a href="/"><i class="icon icon-home"></i></a></li>
+  		
+			<li><a href="/archives"><i class="icon icon-fenlei"></i></a></li>
+  		
+  		
+			<li><a href="/tags"><i class="icon icon-tag"></i></a></li>
+  		
+  		
+  			<li><a href="https://github.com/" target="_blank"><i class="icon icon-github"></i></a></li>
+  		
+  	</ul>
+  </nav>
+  <a id="go-top" href="#"><i class="icon icon-up"></i></a>
+</aside>
+      </div>
+      <footer id="footer">
+  
+	<div id="footer-info" class="inner">
+	  &copy; 2016 Fredyang 
+	  - Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	  - Theme <a href="https://github.com/Alex-fun/hexo-theme-jane/" target="_blank">Jane</a>
+	</div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tag</a>
+  
+    <a href="https://github.com/" class="mobile-nav-link">Github</a>
+  
+</nav>
+    
+
+<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
