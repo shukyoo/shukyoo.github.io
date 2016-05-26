@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>PDO::FETCH_*常量解释和示例 | FREDYANG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="PDO的FETCH_*方面的常量对读取数据方面非常实用，以下常量通过参考PHP手册以及参考网上资料自己测试和总结而来。
+
+FETCH_NUM：获取每一行以字段位置作为索引的数组，从0开始；
+FETCH_ASSOC：获取每一行以字段名作为索引的数组；
+FETCH_NAMED：跟FETCH_ASSOC类似，只是当遇到结果集中存在字段重名时，FETCH_NAMED针对重名字段返回的是数组形式，而FETC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PDO::FETCH_*常量解释和示例">
+<meta property="og:url" content="http://fredyang.com/2016/05/26/pdo-fetch-mode-constants/index.html">
+<meta property="og:site_name" content="FREDYANG">
+<meta property="og:description" content="PDO的FETCH_*方面的常量对读取数据方面非常实用，以下常量通过参考PHP手册以及参考网上资料自己测试和总结而来。
+
+FETCH_NUM：获取每一行以字段位置作为索引的数组，从0开始；
+FETCH_ASSOC：获取每一行以字段名作为索引的数组；
+FETCH_NAMED：跟FETCH_ASSOC类似，只是当遇到结果集中存在字段重名时，FETCH_NAMED针对重名字段返回的是数组形式，而FETC">
+<meta property="og:updated_time" content="2016-05-26T13:20:00.182Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PDO::FETCH_*常量解释和示例">
+<meta name="twitter:description" content="PDO的FETCH_*方面的常量对读取数据方面非常实用，以下常量通过参考PHP手册以及参考网上资料自己测试和总结而来。
+
+FETCH_NUM：获取每一行以字段位置作为索引的数组，从0开始；
+FETCH_ASSOC：获取每一行以字段名作为索引的数组；
+FETCH_NAMED：跟FETCH_ASSOC类似，只是当遇到结果集中存在字段重名时，FETCH_NAMED针对重名字段返回的是数组形式，而FETC">
+  
+    <link rel="alternative" href="/atom.xml" title="FREDYANG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <section id="main"><article id="post-pdo-fetch-mode-constants" class="article article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      PDO::FETCH_*常量解释和示例
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/05/26/pdo-fetch-mode-constants/" class="article-date">
+  <time datetime="2016-05-26T13:07:38.000Z" itemprop="datePublished">2016-05-26</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/PHP/">PHP</a>
+  </div>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>PDO的FETCH_*方面的常量对读取数据方面非常实用，以下常量通过参考PHP手册以及参考网上资料自己测试和总结而来。</p>
+<ul>
+<li>FETCH_NUM：获取每一行以字段位置作为索引的数组，从0开始；</li>
+<li>FETCH_ASSOC：获取每一行以字段名作为索引的数组；</li>
+<li>FETCH_NAMED：跟FETCH_ASSOC类似，只是当遇到结果集中存在字段重名时，FETCH_NAMED针对重名字段返回的是数组形式，而FETCH_ASSOC针对重名字段只返回一个值；<a id="more"></a></li>
+<li>FETCH_BOTH：同时返回以NUM和ASSOC这两种形式的数组，为默认方式；</li>
+<li>FETCH_OBJ：返回stdClass对象，字段名为对象属性；</li>
+<li>FETCH_LAZY：返回PDORow类，以及FETCH_OBJ和FETCH_BOTH的形式，从而可以在这三种形式中任选一种；</li>
+<li>FETCH_BOUND：返回true值，并将获取的列值赋给在bindColumn()方法中指定的相应变量，主要用在绑定输出结果时，使用这种模式可以避免创建不必要的数组或对象，好处就是当你只使用绑定输出而不用其它输出内容时，就可以节省资源，二来避免不必要的错误等；</li>
+<li><p>FETCH_FUNC：只对fetchAll()起作用，通过声明的回调函数来处理数据，函数参数为各个字段，例如：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$stmt-&gt;fetchAll(PDO::FETCH_FUNC, <span class="string">'test'</span>);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span><span class="params">($c1, $c2, $c3)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"-- $c1, $c2, $c3 --"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>FETCH_KEY_PAIR：对第一个字段的值和第二个字段的值进行key=&gt;value的配对，select语句只能有两个字段，否则会报错；</p>
+</li>
+<li>FETCH_CLASS：通过指定类名，返回一个类的实例，把相应的字段名作为类的属性，然后对属性赋值，如果属性没有在类中预先声明，而且存在__set，则会调用__set；</li>
+<li>FETCH_INTO：将返回的数据合并到一个指定的实例类中返回；</li>
+<li><p>FETCH_SERIALIZE：跟fetch_into类似，只是它需要给定的是一个可序列化的对象，可以把以序列化形式存在数据库里的数据进行良好的衔接；示例如下：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> $data;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;data = <span class="string">"My private data"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">serialize</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> serialize(<span class="keyword">$this</span>-&gt;data);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">unserialize</span><span class="params">($data)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;data = unserialize($data);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getData</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;data;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">$foo = <span class="keyword">new</span> Foo;</span><br><span class="line">$stmt = $pdo-&gt;prepare(<span class="string">'SELECT data FROM test'</span>);</span><br><span class="line">$stmt-&gt;execute();</span><br><span class="line">$stmt-&gt;setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_SERIALIZE, <span class="string">'foo'</span>);</span><br><span class="line">$data = $stmt-&gt;fetch();</span><br><span class="line">var_dump($data-&gt;getData());</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>FETCH_PROPS_LATE：FETCH_CLASS是在完成设置属性再调用构造函数，而配合上FETCH_PROPS_LATE就可以实现先调用构造函数再设置属性，用法如下：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$pdo-&gt;setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, <span class="string">'MyClass'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>FETCH_UNIQUE：select语句的第一个字段作为返回数组的key，这样key是唯一的，如果重复会被覆盖，用法如下：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$data = $pdo-&gt;query(<span class="string">'SELECT method, id, name FROM category'</span>)-&gt;fetchAll(PDO::FETCH_UNIQUE | PDO::FETCH_ASSOC);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>结果如下：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">array</span>(   </span><br><span class="line">   <span class="string">'service'</span> =&gt; <span class="keyword">array</span>(   </span><br><span class="line">       <span class="string">'id'</span> =&gt; <span class="string">'1'</span>,   </span><br><span class="line">       <span class="string">'name'</span> =&gt; <span class="string">'HBO'</span>,   </span><br><span class="line">   ),   </span><br><span class="line">   <span class="string">'movie'</span> =&gt; <span class="keyword">array</span>(   </span><br><span class="line">       <span class="string">'id'</span> =&gt; <span class="string">'3'</span>,   </span><br><span class="line">       <span class="string">'name'</span> =&gt; <span class="string">'热映中'</span>,   </span><br><span class="line">   ),   </span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>FETCH_GROUP：第一个字段作为返回数组的key，以key为group对数据进行分组，示例如下：<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$data = $pdo-&gt;query(<span class="string">'SELECT method, id, name FROM category'</span>)-&gt;fetchAll(PDO::FETCH_ASSOC | PDO::FETCH_GROUP);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>返回结果如下：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">array</span>(   </span><br><span class="line">   <span class="string">'service'</span> =&gt; <span class="keyword">array</span>(   </span><br><span class="line">       <span class="keyword">array</span>(   </span><br><span class="line">           <span class="string">'id'</span> =&gt; <span class="string">'1'</span>   </span><br><span class="line">           <span class="string">'name'</span> =&gt; <span class="string">'HBO'</span>   </span><br><span class="line">       ),   </span><br><span class="line">   )   </span><br><span class="line">   <span class="string">'movie'</span> =&gt; <span class="keyword">array</span>(   </span><br><span class="line">       <span class="keyword">array</span>(   </span><br><span class="line">         <span class="string">'id'</span> =&gt; <span class="string">'2'</span>   </span><br><span class="line">         <span class="string">'name'</span> =&gt; <span class="string">'本周新片'</span>   </span><br><span class="line">       ),   </span><br><span class="line">       <span class="keyword">array</span>(   </span><br><span class="line">         <span class="string">'id'</span> =&gt; <span class="string">'3'</span>   </span><br><span class="line">         <span class="string">'name'</span> =&gt; <span class="string">'热映中'</span>   </span><br><span class="line">       ),   </span><br><span class="line">   )   </span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+        
+    </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/05/25/coding-philosophy/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">编程哲言</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="post-pdo-fetch-mode-constants" data-title="PDO::FETCH_*常量解释和示例" data-url="http://fredyang.com/2016/05/26/pdo-fetch-mode-constants/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"fredyang"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+</section>
+</section>
+        <aside id="sidebar">
+  <nav class="menus">
+  	<ul>
+  		<li><a href="/"><i class="icon icon-home"></i></a></li>
+  		
+			<li><a href="/archives"><i class="icon icon-fenlei"></i></a></li>
+  		
+  		
+			<li><a href="/tags"><i class="icon icon-tag"></i></a></li>
+  		
+  		
+  			<li><a href="https://github.com/" target="_blank"><i class="icon icon-github"></i></a></li>
+  		
+  	</ul>
+  </nav>
+  <a id="go-top" href="#"><i class="icon icon-up"></i></a>
+</aside>
+      </div>
+      <footer id="footer">
+  
+	<div id="footer-info" class="inner">
+	  &copy; 2016 Fredyang 
+	  - Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	  - Theme <a href="https://github.com/Alex-fun/hexo-theme-jane/" target="_blank">Jane</a>
+	</div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tag</a>
+  
+    <a href="https://github.com/" class="mobile-nav-link">Github</a>
+  
+</nav>
+    
+
+<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

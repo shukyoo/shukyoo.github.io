@@ -5,13 +5,15 @@
     
   <url>
     <loc>http://fredyang.com/2016/05/25/coding-philosophy/</loc>
-    <lastmod>2016-05-25T13:40:40.187Z</lastmod>
+    <lastmod>2016-05-26T13:58:36.036Z</lastmod>
     <data>
         <display>
         <title>编程哲言</title>
         <pubTime>2016-05-25T13:37:55.000Z</pubTime>
         
         <tag>philosophy</tag>
+         
+        <tag>funny</tag>
          
          
            
@@ -24,8 +26,54 @@
 
     
   <url>
+    <loc>http://fredyang.com/2016/05/23/funny-rules-and-effects/</loc>
+    <lastmod>2016-05-26T13:58:31.341Z</lastmod>
+    <data>
+        <display>
+        <title>有意思的定理和法则</title>
+        <pubTime>2016-05-23T11:01:54.000Z</pubTime>
+        
+        <tag>social</tag>
+         
+        <tag>psychological</tag>
+         
+        <tag>funny</tag>
+         
+         
+           
+             
+              <breadCrumb title="Thinking" url="http://fredyang.com/categories/Thinking/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fredyang.com/2016/05/26/pdo-fetch-mode-constants/</loc>
+    <lastmod>2016-05-26T13:20:00.182Z</lastmod>
+    <data>
+        <display>
+        <title>PDO::FETCH_*常量解释和示例</title>
+        <pubTime>2016-05-26T13:07:38.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>pdo</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://fredyang.com/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://fredyang.com/2016/05/25/php-code-standard-essential/</loc>
-    <lastmod>2016-05-25T13:07:15.843Z</lastmod>
+    <lastmod>2016-05-25T13:41:40.767Z</lastmod>
     <data>
         <display>
         <title>PHP代码规范精要</title>
@@ -55,28 +103,6 @@
         
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://fredyang.com/2016/05/23/funny-rules-and-effects/</loc>
-    <lastmod>2016-05-25T01:14:25.958Z</lastmod>
-    <data>
-        <display>
-        <title>有意思的定理和法则</title>
-        <pubTime>2016-05-23T11:01:54.000Z</pubTime>
-        
-        <tag>social</tag>
-         
-        <tag>psychological</tag>
-         
-         
-           
-             
-              <breadCrumb title="Thinking" url="http://fredyang.com/categories/Thinking/"/>
-          
         </display>
     </data>
     </url>
