@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://fredyang.com/2016/05/27/php-spl-exceptions/</loc>
+    
+    <lastmod>2016-05-27T01:33:51.519Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://fredyang.com/2016/05/25/coding-philosophy/</loc>
     
     <lastmod>2016-05-26T13:58:36.036Z</lastmod>

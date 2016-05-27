@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://fredyang.com/2016/05/27/php-spl-exceptions/</loc>
+    <lastmod>2016-05-27T01:33:51.519Z</lastmod>
+    <data>
+        <display>
+        <title>php spl exceptions</title>
+        <pubTime>2016-05-27T01:08:58.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>spl</tag>
+         
+        <tag>exception</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://fredyang.com/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://fredyang.com/2016/05/25/coding-philosophy/</loc>
     <lastmod>2016-05-26T13:58:36.036Z</lastmod>
     <data>
@@ -33,11 +57,11 @@
         <title>有意思的定理和法则</title>
         <pubTime>2016-05-23T11:01:54.000Z</pubTime>
         
+        <tag>funny</tag>
+         
         <tag>social</tag>
          
         <tag>psychological</tag>
-         
-        <tag>funny</tag>
          
          
            

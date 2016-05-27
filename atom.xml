@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://fredyang.com/"/>
-  <updated>2016-05-26T13:20:00.182Z</updated>
+  <updated>2016-05-27T01:33:51.519Z</updated>
   <id>http://fredyang.com/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>php spl exceptions</title>
+    <link href="http://fredyang.com/2016/05/27/php-spl-exceptions/"/>
+    <id>http://fredyang.com/2016/05/27/php-spl-exceptions/</id>
+    <published>2016-05-27T01:08:58.000Z</published>
+    <updated>2016-05-27T01:33:51.519Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;strong&gt;BadFunctionCallException&lt;/strong&gt;  [extends LogicException ]&lt;br&gt;未定义的函数或参数缺失&lt;br&gt;Exception thrown if a callback refers to an undefined function or if some arguments are missing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;BadMethodCallException&lt;/strong&gt; [extends BadFunctionCallException]&lt;br&gt;未定义的方法或参数缺失&lt;br&gt;Exception thrown if a callback refers to an undefined method or if some arguments are missing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DomainException&lt;/strong&gt; [extends LogicException]&lt;br&gt;不符合已定义的数据域&lt;br&gt;Exception thrown if a value does not adhere to a defined valid data domain.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;InvalidArgumentException&lt;/strong&gt; [extends LogicException]&lt;br&gt;参数无效&lt;br&gt;Exception thrown if an argument is not of the expected type.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;LengthException&lt;/strong&gt; [extends LogicException]&lt;br&gt;长度无效&lt;br&gt;Exception thrown if a length is invalid.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;LogicException&lt;/strong&gt; [extends Exception]&lt;br&gt;程序逻辑错误&lt;br&gt;Exception that represents error in the program logic. This kind of exception should lead directly to a fix in your code.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;OutOfBoundsException&lt;/strong&gt; [extends RuntimeException]&lt;br&gt;运行中值越界&lt;br&gt;Exception thrown if a value is not a valid key. This represents errors that cannot be detected at compile time.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;OutOfRangeException&lt;/strong&gt; [extends LogicException]&lt;br&gt;编译中索引超出有效范围&lt;br&gt;Exception thrown when an illegal index was requested. This represents errors that should be detected at compile time.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;OverflowException&lt;/strong&gt; [extends RuntimeException]&lt;br&gt;溢出&lt;br&gt;Exception thrown when adding an element to a full container.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;RangeException&lt;/strong&gt; [extends RuntimeException]&lt;br&gt;运行期间值不在已定义的数据域中&lt;br&gt;Exception thrown to indicate range errors during program execution. Normally this means there was an arithmetic error other than under/overflow. This is the runtime version of DomainException.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;RuntimeException&lt;/strong&gt; [extends Exception]&lt;br&gt;运行期间异常&lt;br&gt;Exception thrown if an error which can only be found on runtime occurs.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;UnderflowException&lt;/strong&gt; [extends RuntimeException]&lt;br&gt;操作空容器&lt;br&gt;Exception thrown when performing an invalid operation on an empty container, such as removing an element.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;UnexpectedValueException&lt;/strong&gt; [extends RuntimeException]&lt;br&gt;得到非期望的值&lt;br&gt;Exception thrown if a value does not match with a set of values. Typically this happens when a function calls another function and expects the return value to be of a certain type or value not including arithmetic or buffer related errors.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;BadFunctionCallException&lt;/strong&gt;  [extends LogicException ]&lt;br&gt;未定义的函数或参数缺失&lt;br&gt;Exception thrown if a callback refers to an undefi
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://fredyang.com/categories/PHP/"/>
+    
+    
+      <category term="php" scheme="http://fredyang.com/tags/php/"/>
+    
+      <category term="spl" scheme="http://fredyang.com/tags/spl/"/>
+    
+      <category term="exception" scheme="http://fredyang.com/tags/exception/"/>
+    
+  </entry>
   
   <entry>
     <title>PDO::FETCH_*常量解释和示例</title>
@@ -336,11 +375,11 @@
       <category term="Thinking" scheme="http://fredyang.com/categories/Thinking/"/>
     
     
+      <category term="funny" scheme="http://fredyang.com/tags/funny/"/>
+    
       <category term="social" scheme="http://fredyang.com/tags/social/"/>
     
       <category term="psychological" scheme="http://fredyang.com/tags/psychological/"/>
-    
-      <category term="funny" scheme="http://fredyang.com/tags/funny/"/>
     
   </entry>
   
