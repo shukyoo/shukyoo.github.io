@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://fredyang.com/"/>
-  <updated>2016-07-20T14:47:22.382Z</updated>
+  <updated>2016-07-20T14:53:09.294Z</updated>
   <id>http://fredyang.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>php psr-3 log interface</title>
+    <title>PHP PSR-3 Log Interface</title>
     <link href="http://fredyang.com/2016/07/20/php-psr-3-log-interface/"/>
     <id>http://fredyang.com/2016/07/20/php-psr-3-log-interface/</id>
     <published>2016-07-20T14:28:09.000Z</published>
-    <updated>2016-07-20T14:47:22.382Z</updated>
+    <updated>2016-07-20T14:53:09.294Z</updated>
     
     <content type="html">&lt;p&gt;PHP PSR-3定义了日志接口规范。&lt;/p&gt;
 &lt;p&gt;什么是PSR-3日志接口规范，具体请参考：&lt;/p&gt;
