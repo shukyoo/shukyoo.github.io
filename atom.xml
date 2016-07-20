@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://fredyang.com/"/>
-  <updated>2016-05-28T15:32:13.027Z</updated>
+  <updated>2016-07-20T14:47:22.382Z</updated>
   <id>http://fredyang.com/</id>
   
   <author>
@@ -14,6 +14,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>php psr-3 log interface</title>
+    <link href="http://fredyang.com/2016/07/20/php-psr-3-log-interface/"/>
+    <id>http://fredyang.com/2016/07/20/php-psr-3-log-interface/</id>
+    <published>2016-07-20T14:28:09.000Z</published>
+    <updated>2016-07-20T14:47:22.382Z</updated>
+    
+    <content type="html">&lt;p&gt;PHP PSR-3定义了日志接口规范。&lt;/p&gt;
+&lt;p&gt;什么是PSR-3日志接口规范，具体请参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;中文 &lt;a href=&quot;https://segmentfault.com/a/1190000002521644&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://segmentfault.com/a/1190000002521644&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;官网 &lt;a href=&quot;http://www.php-fig.org/psr/psr-3/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.php-fig.org/psr/psr-3/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;github &lt;a href=&quot;https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;PSR Log源码： &lt;a href=&quot;https://github.com/php-fig/log&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/php-fig/log&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;基于PSR Log实现的Logging类库：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Monolog &lt;a href=&quot;https://github.com/Seldaek/monolog&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Seldaek/monolog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;KLogger &lt;a href=&quot;https://github.com/katzgrau/KLogger&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/katzgrau/KLogger&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Analog &lt;a href=&quot;https://github.com/jbroadway/analog&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/jbroadway/analog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;PHP PSR-3定义了日志接口规范。&lt;/p&gt;
+&lt;p&gt;什么是PSR-3日志接口规范，具体请参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;中文 &lt;a href=&quot;https://segmentfault.com/a/1190000002521644&quot; target=&quot;_blank&quot; re
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://fredyang.com/categories/PHP/"/>
+    
+    
+      <category term="php" scheme="http://fredyang.com/tags/php/"/>
+    
+      <category term="psr-3" scheme="http://fredyang.com/tags/psr-3/"/>
+    
+      <category term="log interface" scheme="http://fredyang.com/tags/log-interface/"/>
+    
+  </entry>
   
   <entry>
     <title>做一个高效的程序员</title>
