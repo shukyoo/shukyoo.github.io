@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://fredyang.com/"/>
-  <updated>2016-07-20T14:53:09.294Z</updated>
+  <updated>2016-07-31T15:38:40.002Z</updated>
   <id>http://fredyang.com/</id>
   
   <author>
@@ -14,6 +14,97 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网站性能优化</title>
+    <link href="http://fredyang.com/2016/07/31/website-performance-optimization/"/>
+    <id>http://fredyang.com/2016/07/31/website-performance-optimization/</id>
+    <published>2016-07-31T15:08:25.000Z</published>
+    <updated>2016-07-31T15:38:40.002Z</updated>
+    
+    <content type="html">&lt;p&gt;一个网站的性能优化可以从前到后来分析和优化。&lt;br&gt;优化分两方面，一方面是开发层面的优化，另一方面是架构层面的优化，这里主要是指架构层面的优化，也即对现有网站的性能优化策略。&lt;br&gt;优化的实现细节很多，这里只列出关键点，至于实现则都是文章了。&lt;br&gt;从前到后我们分四个方面：&lt;br&gt;前端性能优化，后端性能优化，数据库性能优化和服务器架构&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一，前端性能优化&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;减少http请求&lt;/li&gt;
+&lt;li&gt;压缩静态资源&lt;/li&gt;
+&lt;li&gt;增加静态资源域名&lt;/li&gt;
+&lt;li&gt;异步加载&lt;/li&gt;
+&lt;li&gt;Lazy Load（JS和图片）&lt;/li&gt;
+&lt;li&gt;本地缓存&lt;/li&gt;
+&lt;li&gt;压缩图片&lt;/li&gt;
+&lt;li&gt;gzip传输&lt;/li&gt;
+&lt;li&gt;压缩html&lt;/li&gt;
+&lt;li&gt;css sprite&lt;/li&gt;
+&lt;li&gt;JS脚本放到页脚&lt;/li&gt;
+&lt;li&gt;避免html图片缩放（大图当小图用）&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;二，后端性能优化&lt;/strong&gt;（这里更多是实现上的注意点）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;避免联表查询&lt;/li&gt;
+&lt;li&gt;避免循环查数据库&lt;/li&gt;
+&lt;li&gt;页面缓存+内容缓存&lt;/li&gt;
+&lt;li&gt;避免多重循环&lt;/li&gt;
+&lt;li&gt;异步处理&lt;/li&gt;
+&lt;li&gt;单例设计模式&lt;/li&gt;
+&lt;li&gt;避免过度封装&lt;/li&gt;
+&lt;li&gt;避免重复取数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;PHP层面：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;熟悉和使用php内置函数&lt;/li&gt;
+&lt;li&gt;升级php版本&lt;/li&gt;
+&lt;li&gt;使用xhprof查找瓶颈&lt;/li&gt;
+&lt;li&gt;Opcode cache&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;三，数据库性能优化&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;合理使用索引&lt;/li&gt;
+&lt;li&gt;解决慢查询&lt;/li&gt;
+&lt;li&gt;分表分库(水平拆分)&lt;/li&gt;
+&lt;li&gt;避免大表（垂直拆分）&lt;/li&gt;
+&lt;li&gt;SQL语句优化&lt;/li&gt;
+&lt;li&gt;避免全表扫描&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;四，服务器架构&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;负载均衡&lt;/li&gt;
+&lt;li&gt;主从数据库&lt;/li&gt;
+&lt;li&gt;分布式缓存&lt;/li&gt;
+&lt;li&gt;消息队列&lt;/li&gt;
+&lt;li&gt;CDN&lt;/li&gt;
+&lt;li&gt;大请求服务分离&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一个网站的性能优化可以从前到后来分析和优化。&lt;br&gt;优化分两方面，一方面是开发层面的优化，另一方面是架构层面的优化，这里主要是指架构层面的优化，也即对现有网站的性能优化策略。&lt;br&gt;优化的实现细节很多，这里只列出关键点，至于实现则都是文章了。&lt;br&gt;从前到后我们分四个方面：&lt;br&gt;前端性能优化，后端性能优化，数据库性能优化和服务器架构&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一，前端性能优化&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;减少http请求&lt;/li&gt;
+&lt;li&gt;压缩静态资源&lt;/li&gt;
+&lt;li&gt;增加静态资源域名&lt;/li&gt;
+&lt;li&gt;异步加载&lt;/li&gt;
+&lt;li&gt;Lazy Load（JS和图片）&lt;/li&gt;
+&lt;li&gt;本地缓存&lt;/li&gt;
+&lt;li&gt;压缩图片&lt;/li&gt;
+&lt;li&gt;gzip传输&lt;/li&gt;
+&lt;li&gt;压缩html&lt;/li&gt;
+&lt;li&gt;css sprite&lt;/li&gt;
+&lt;li&gt;JS脚本放到页脚&lt;/li&gt;
+&lt;li&gt;避免html图片缩放（大图当小图用）
+    
+    </summary>
+    
+      <category term="Architecture" scheme="http://fredyang.com/categories/Architecture/"/>
+    
+    
+      <category term="性能" scheme="http://fredyang.com/tags/%E6%80%A7%E8%83%BD/"/>
+    
+      <category term="performance" scheme="http://fredyang.com/tags/performance/"/>
+    
+  </entry>
   
   <entry>
     <title>PHP PSR-3 Log Interface</title>
@@ -305,9 +396,9 @@
       <category term="Thinking" scheme="http://fredyang.com/categories/Thinking/"/>
     
     
-      <category term="philosophy" scheme="http://fredyang.com/tags/philosophy/"/>
-    
       <category term="funny" scheme="http://fredyang.com/tags/funny/"/>
+    
+      <category term="philosophy" scheme="http://fredyang.com/tags/philosophy/"/>
     
   </entry>
   
@@ -522,11 +613,11 @@
       <category term="Thinking" scheme="http://fredyang.com/categories/Thinking/"/>
     
     
-      <category term="funny" scheme="http://fredyang.com/tags/funny/"/>
-    
       <category term="social" scheme="http://fredyang.com/tags/social/"/>
     
       <category term="psychological" scheme="http://fredyang.com/tags/psychological/"/>
+    
+      <category term="funny" scheme="http://fredyang.com/tags/funny/"/>
     
   </entry>
   

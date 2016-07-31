@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://fredyang.com/2016/07/31/website-performance-optimization/</loc>
+    
+    <lastmod>2016-07-31T15:38:40.002Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://fredyang.com/2016/07/20/php-psr-3-log-interface/</loc>
     
     <lastmod>2016-07-20T14:53:09.294Z</lastmod>

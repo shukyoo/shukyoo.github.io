@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://fredyang.com/2016/07/31/website-performance-optimization/</loc>
+    <lastmod>2016-07-31T15:38:40.002Z</lastmod>
+    <data>
+        <display>
+        <title>网站性能优化</title>
+        <pubTime>2016-07-31T15:08:25.000Z</pubTime>
+        
+        <tag>性能</tag>
+         
+        <tag>performance</tag>
+         
+         
+           
+             
+              <breadCrumb title="Architecture" url="http://fredyang.com/categories/Architecture/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://fredyang.com/2016/07/20/php-psr-3-log-interface/</loc>
     <lastmod>2016-07-20T14:53:09.294Z</lastmod>
     <data>
@@ -79,9 +101,9 @@
         <title>编程哲言</title>
         <pubTime>2016-05-25T13:37:55.000Z</pubTime>
         
-        <tag>philosophy</tag>
-         
         <tag>funny</tag>
+         
+        <tag>philosophy</tag>
          
          
            
@@ -101,11 +123,11 @@
         <title>有意思的定理和法则</title>
         <pubTime>2016-05-23T11:01:54.000Z</pubTime>
         
-        <tag>funny</tag>
-         
         <tag>social</tag>
          
         <tag>psychological</tag>
+         
+        <tag>funny</tag>
          
          
            

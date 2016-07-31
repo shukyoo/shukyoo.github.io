@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>网站性能优化 | FREDYANG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一个网站的性能优化可以从前到后来分析和优化。优化分两方面，一方面是开发层面的优化，另一方面是架构层面的优化，这里主要是指架构层面的优化，也即对现有网站的性能优化策略。优化的实现细节很多，这里只列出关键点，至于实现则都是文章了。从前到后我们分四个方面：前端性能优化，后端性能优化，数据库性能优化和服务器架构
+一，前端性能优化
+
+减少http请求
+压缩静态资源
+增加静态资源域名
+异步加载
+Lazy Lo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网站性能优化">
+<meta property="og:url" content="http://fredyang.com/2016/07/31/website-performance-optimization/index.html">
+<meta property="og:site_name" content="FREDYANG">
+<meta property="og:description" content="一个网站的性能优化可以从前到后来分析和优化。优化分两方面，一方面是开发层面的优化，另一方面是架构层面的优化，这里主要是指架构层面的优化，也即对现有网站的性能优化策略。优化的实现细节很多，这里只列出关键点，至于实现则都是文章了。从前到后我们分四个方面：前端性能优化，后端性能优化，数据库性能优化和服务器架构
+一，前端性能优化
+
+减少http请求
+压缩静态资源
+增加静态资源域名
+异步加载
+Lazy Lo">
+<meta property="og:updated_time" content="2016-07-31T15:38:40.002Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="网站性能优化">
+<meta name="twitter:description" content="一个网站的性能优化可以从前到后来分析和优化。优化分两方面，一方面是开发层面的优化，另一方面是架构层面的优化，这里主要是指架构层面的优化，也即对现有网站的性能优化策略。优化的实现细节很多，这里只列出关键点，至于实现则都是文章了。从前到后我们分四个方面：前端性能优化，后端性能优化，数据库性能优化和服务器架构
+一，前端性能优化
+
+减少http请求
+压缩静态资源
+增加静态资源域名
+异步加载
+Lazy Lo">
+  
+    <link rel="alternative" href="/atom.xml" title="FREDYANG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <section id="main"><article id="post-website-performance-optimization" class="article article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      网站性能优化
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/07/31/website-performance-optimization/" class="article-date">
+  <time datetime="2016-07-31T15:08:25.000Z" itemprop="datePublished">2016-07-31</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Architecture/">Architecture</a>
+  </div>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一个网站的性能优化可以从前到后来分析和优化。<br>优化分两方面，一方面是开发层面的优化，另一方面是架构层面的优化，这里主要是指架构层面的优化，也即对现有网站的性能优化策略。<br>优化的实现细节很多，这里只列出关键点，至于实现则都是文章了。<br>从前到后我们分四个方面：<br>前端性能优化，后端性能优化，数据库性能优化和服务器架构</p>
+<p><strong>一，前端性能优化</strong></p>
+<ul>
+<li>减少http请求</li>
+<li>压缩静态资源</li>
+<li>增加静态资源域名</li>
+<li>异步加载</li>
+<li>Lazy Load（JS和图片）</li>
+<li>本地缓存</li>
+<li>压缩图片</li>
+<li>gzip传输</li>
+<li>压缩html</li>
+<li>css sprite</li>
+<li>JS脚本放到页脚</li>
+<li>避免html图片缩放（大图当小图用）<a id="more"></a>
+</li>
+</ul>
+<p><strong>二，后端性能优化</strong>（这里更多是实现上的注意点）</p>
+<ul>
+<li>避免联表查询</li>
+<li>避免循环查数据库</li>
+<li>页面缓存+内容缓存</li>
+<li>避免多重循环</li>
+<li>异步处理</li>
+<li>单例设计模式</li>
+<li>避免过度封装</li>
+<li>避免重复取数据</li>
+</ul>
+<p>PHP层面：</p>
+<ul>
+<li>熟悉和使用php内置函数</li>
+<li>升级php版本</li>
+<li>使用xhprof查找瓶颈</li>
+<li>Opcode cache</li>
+</ul>
+<p><strong>三，数据库性能优化</strong></p>
+<ul>
+<li>合理使用索引</li>
+<li>解决慢查询</li>
+<li>分表分库(水平拆分)</li>
+<li>避免大表（垂直拆分）</li>
+<li>SQL语句优化</li>
+<li>避免全表扫描</li>
+</ul>
+<p><strong>四，服务器架构</strong></p>
+<ul>
+<li>负载均衡</li>
+<li>主从数据库</li>
+<li>分布式缓存</li>
+<li>消息队列</li>
+<li>CDN</li>
+<li>大请求服务分离</li>
+</ul>
+
+      
+
+      
+        
+    </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/07/20/php-psr-3-log-interface/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">PHP PSR-3 Log Interface</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="post-website-performance-optimization" data-title="网站性能优化" data-url="http://fredyang.com/2016/07/31/website-performance-optimization/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"fredyang"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+</section>
+</section>
+        <aside id="sidebar">
+  <nav class="menus">
+  	<ul>
+  		<li><a href="/"><i class="icon icon-home"></i></a></li>
+  		
+			<li><a href="/archives"><i class="icon icon-fenlei"></i></a></li>
+  		
+  		
+			<li><a href="/tags"><i class="icon icon-tag"></i></a></li>
+  		
+  		
+  	</ul>
+  </nav>
+  <a id="go-top" href="#"><i class="icon icon-up"></i></a>
+</aside>
+      </div>
+      <footer id="footer">
+  
+	<div id="footer-info" class="inner">
+	  &copy; 2016 Fredyang 
+	  - Hosted on <a href="https://github.com/" target="_blank">Github</a>
+	  - Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	  - Contact me: shuky2000#163.com
+	</div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tag</a>
+  
+    <a href="/" class="mobile-nav-link">Github</a>
+  
+</nav>
+    
+
+<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
