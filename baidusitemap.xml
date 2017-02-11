@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://fredyang.com/2017/02/09/error-and-exception/</loc>
+    <lastmod>2017-02-11T03:40:18.054Z</lastmod>
+    <data>
+        <display>
+        <title>错误和异常</title>
+        <pubTime>2017-02-09T15:07:34.000Z</pubTime>
+        
+        <tag>error</tag>
+         
+        <tag>exception</tag>
+         
+        <tag>php</tag>
+         
+         
+           
+             
+              <breadCrumb title="Thinking" url="http://fredyang.com/categories/Thinking/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://fredyang.com/2016/07/31/website-performance-optimization/</loc>
     <lastmod>2016-07-31T15:38:40.002Z</lastmod>
     <data>
@@ -77,11 +101,11 @@
         <title>PHP SPL Exceptions</title>
         <pubTime>2016-05-27T01:08:58.000Z</pubTime>
         
+        <tag>exception</tag>
+         
         <tag>php</tag>
          
         <tag>spl</tag>
-         
-        <tag>exception</tag>
          
          
            
@@ -101,9 +125,9 @@
         <title>编程哲言</title>
         <pubTime>2016-05-25T13:37:55.000Z</pubTime>
         
-        <tag>funny</tag>
-         
         <tag>philosophy</tag>
+         
+        <tag>funny</tag>
          
          
            
@@ -123,11 +147,11 @@
         <title>有意思的定理和法则</title>
         <pubTime>2016-05-23T11:01:54.000Z</pubTime>
         
+        <tag>funny</tag>
+         
         <tag>social</tag>
          
         <tag>psychological</tag>
-         
-        <tag>funny</tag>
          
          
            
