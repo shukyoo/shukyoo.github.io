@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://shukyoo.github.io/"/>
-  <updated>2017-02-11T03:40:18.054Z</updated>
+  <updated>2017-02-12T13:02:25.902Z</updated>
   <id>http://shukyoo.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://shukyoo.github.io/2017/02/09/error-and-exception/"/>
     <id>http://shukyoo.github.io/2017/02/09/error-and-exception/</id>
     <published>2017-02-09T15:07:34.000Z</published>
-    <updated>2017-02-11T03:40:18.054Z</updated>
+    <updated>2017-02-12T13:02:25.902Z</updated>
     
     <content type="html">&lt;p&gt;我们在程序里经常会碰到错误和异常，那么这里就会&lt;strong&gt;引申出几个问题&lt;/strong&gt;：&lt;/p&gt;
 &lt;ol&gt;
@@ -37,29 +37,19 @@
 &lt;li&gt;程序要调用第三方接口，结果因各种原因调用失败，这个是错误还是异常？&lt;/li&gt;
 &lt;li&gt;数据保存失败，这个是错误还是异常？&lt;/li&gt;
 &lt;/ol&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;p&gt;错误和异常在某些方面是一样的，都表示了在正常业务逻辑之外的可能存在的旁支逻辑；&lt;br&gt;错误分为两种维度的错误，一种维度是产品层面的错误，属于正常的业务范畴，比如用户密码错误、上传文件类型不正确；另一种维度是程序层面的错误，这种可能更接近于异常，所以我们要比较的更多是程序层面的错误和异常；&lt;/p&gt;
 &lt;p&gt;首先我们要确定一个概念就是“错误是值，异常是真正的错误”，错误是可预期可接受的，异常是不可预期不可接受的；&lt;br&gt;对于可预期可接受的逻辑，我们往往能对它作后续的准备和处理，但是对于不可预期不可接受的逻辑，我们往往没有办法，只能throw exception让程序崩溃让它速错；&lt;/p&gt;
 &lt;p&gt;在构造方法里出现的错误，比如传入的参数，对于可接受可容忍的错误，我们会让参数以比如默认值的形式赋值并继续，但是对于不可容忍的错误，我们只能throw exception；&lt;/p&gt;
 &lt;p&gt;在链式模式下出现的错误，因为链式模式的返回是this，所以一般情况的错误都会throw exception，要确保返回this，否则链式就会断；&lt;/p&gt;
 &lt;p&gt;错误表现为宽容的处理，通过人为干预，让程序继续；异常表现为阻止和不处理，如果继续意味着真正的业务错误，所以让程序崩溃；&lt;/p&gt;
-&lt;p&gt;对于底层类库的throw exception，一般是为了“防止使用不当”和“程序异常”而设置的“阻止”，并通过速错让错误暴露，比如&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;if (!$queue instanceof QueueInterface) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    throw exception(&amp;apos;...&amp;apos;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;比如&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;if (is_null($this-&amp;gt;id)) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    throw exception(&amp;apos;...&amp;apos;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;``` &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;异常是速错和崩溃不需要返回值，但是错误是值，所以它需要有返回值，比如：&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;if (!$this-&amp;gt;id) {&lt;br&gt;    return false;&lt;br&gt;}&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;不管因为错误返回false或返回null，那么一方面对于被调用方是要能预期的@return bool ture|false或者@return Object | null，另一方面错误消息的传递；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;由于错误是值，所以错误的返回值和错误消息其实是业务逻辑和程序设计组成的一部分；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;对于PHP的错误返回和表示一般会有以下3种方式：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;方式1：&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;function dosome() {&lt;br&gt;    if (empty($data)) {&lt;br&gt;        return [‘status’ =&amp;gt; false, ‘msg’ =&amp;gt; ‘something error’];&lt;br&gt;    }&lt;br&gt;    return [‘status’ =&amp;gt; true, ‘data’ =&amp;gt; $data];&lt;br&gt;}&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;方式2：&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;function dosome(&amp;amp;$errmsg = null) {&lt;br&gt;    if (empty($data)) {&lt;br&gt;        $errmsg = ‘something error’;&lt;br&gt;        return false;&lt;br&gt;    }&lt;br&gt;    return true;&lt;br&gt;}&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;方式3：&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;class Test&lt;br&gt;{&lt;br&gt;    protected $_errmsg;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;public function dosome() {
-    if (empty($data)) {
-        $this-&amp;gt;_errmsg = &amp;apos;something error&amp;apos;;
-        return false;
-    }
-    return true;
-}
-
-public function getErrmsg() {
-    return $this-&amp;gt;_errmsg;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;}&lt;br&gt;```&lt;br&gt;这里不提倡用方式1，像golang通过多返回值的形式，把error作为返回值的其中一个是可以的，但是只有一个返回值而返回带状态的数组这样的设计是糟糕的，除非返回值明确是为了返回错误信息；&lt;/p&gt;
+&lt;p&gt;对于底层类库的throw exception，一般是为了“防止使用不当”和“程序异常”而设置的“阻止”，并通过速错让错误暴露，比如&lt;br&gt;&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!$queue &lt;span class=&quot;keyword&quot;&gt;instanceof&lt;/span&gt; QueueInterface) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;exception&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;...&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;比如&lt;br&gt;&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (is_null(&lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;id)) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;exception&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;...&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;异常是速错和崩溃不需要返回值，但是错误是值，所以它需要有返回值，比如：&lt;br&gt;&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!&lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;id) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;不管因为错误返回false或返回null，那么一方面对于被调用方是要能预期的@return bool ture|false或者@return Object | null，另一方面错误消息的传递；&lt;br&gt;由于错误是值，所以错误的返回值和错误消息其实是业务逻辑和程序设计组成的一部分；&lt;br&gt;对于PHP的错误返回和表示一般会有以下3种方式：&lt;br&gt;方式1：&lt;br&gt;&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;dosome&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($data)) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; [&lt;span class=&quot;string&quot;&gt;&#39;status&#39;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;msg&#39;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;string&quot;&gt;&#39;something error&#39;&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; [&lt;span class=&quot;string&quot;&gt;&#39;status&#39;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;data&#39;&lt;/span&gt; =&amp;gt; $data];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;方式2：&lt;br&gt;&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;dosome&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&amp;amp;$errmsg = null)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($data)) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        $errmsg = &lt;span class=&quot;string&quot;&gt;&#39;something error&#39;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;方式3：&lt;br&gt;&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Test&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;protected&lt;/span&gt; $_errmsg;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;dosome&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($data)) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;_errmsg = &lt;span class=&quot;string&quot;&gt;&#39;something error&#39;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getErrmsg&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;_errmsg;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;这里不提倡用方式1，像golang通过多返回值的形式，把error作为返回值的其中一个是可以的，但是只有一个返回值而返回带状态的数组这样的设计是糟糕的，除非返回值明确是为了返回错误信息；&lt;/p&gt;
 &lt;p&gt;以上是一般原则，在实际开发中错误和异常会混用，在混用时候要以一般原则作为参考，结合实际情况而定；&lt;/p&gt;
 </content>
     
@@ -69,7 +59,17 @@ public function getErrmsg() {
 &lt;ol&gt;
 &lt;li&gt;错误和异常的区别是什么；&lt;/li&gt;
 &lt;li&gt;为什么要有错误和异常的区分；&lt;/li&gt;
-&lt;li&gt;什么时候用错误，什么时候用异常，是否可以全部用异常然后通过
+&lt;li&gt;什么时候用错误，什么时候用异常，是否可以全部用异常然后通过try cache实现错误表示；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;我们举几个例子再引申思考一下：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;用户登录输错密码，这个是错误还是异常？&lt;/li&gt;
+&lt;li&gt;用户充值10元，结果给用户充了20元进去，这个是错误还是异常？&lt;/li&gt;
+&lt;li&gt;用户要上传文件，结果因为文件格式不正确上传失败了，这个是错误还是异常？又如果因为网络原因上传失败了，这个是错误还是异常？&lt;/li&gt;
+&lt;li&gt;开发在实例一个User类的时候，要传int类型的id值进行构造，结果传了一个字符串，这个是错误还是异常？&lt;/li&gt;
+&lt;li&gt;程序要调用第三方接口，结果因各种原因调用失败，这个是错误还是异常？&lt;/li&gt;
+&lt;li&gt;数据保存失败，这个是错误还是异常？&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
@@ -465,9 +465,9 @@ public function getErrmsg() {
       <category term="Thinking" scheme="http://shukyoo.github.io/categories/Thinking/"/>
     
     
-      <category term="funny" scheme="http://shukyoo.github.io/tags/funny/"/>
-    
       <category term="philosophy" scheme="http://shukyoo.github.io/tags/philosophy/"/>
+    
+      <category term="funny" scheme="http://shukyoo.github.io/tags/funny/"/>
     
   </entry>
   
@@ -682,11 +682,11 @@ public function getErrmsg() {
       <category term="Thinking" scheme="http://shukyoo.github.io/categories/Thinking/"/>
     
     
+      <category term="funny" scheme="http://shukyoo.github.io/tags/funny/"/>
+    
       <category term="social" scheme="http://shukyoo.github.io/tags/social/"/>
     
       <category term="psychological" scheme="http://shukyoo.github.io/tags/psychological/"/>
-    
-      <category term="funny" scheme="http://shukyoo.github.io/tags/funny/"/>
     
   </entry>
   

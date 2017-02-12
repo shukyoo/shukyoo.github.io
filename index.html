@@ -72,31 +72,11 @@
 <li>程序要调用第三方接口，结果因各种原因调用失败，这个是错误还是异常？</li>
 <li>数据保存失败，这个是错误还是异常？</li>
 </ol>
-<p>错误和异常在某些方面是一样的，都表示了在正常业务逻辑之外的可能存在的旁支逻辑；<br>错误分为两种维度的错误，一种维度是产品层面的错误，属于正常的业务范畴，比如用户密码错误、上传文件类型不正确；另一种维度是程序层面的错误，这种可能更接近于异常，所以我们要比较的更多是程序层面的错误和异常；</p>
-<p>首先我们要确定一个概念就是“错误是值，异常是真正的错误”，错误是可预期可接受的，异常是不可预期不可接受的；<br>对于可预期可接受的逻辑，我们往往能对它作后续的准备和处理，但是对于不可预期不可接受的逻辑，我们往往没有办法，只能throw exception让程序崩溃让它速错；</p>
-<p>在构造方法里出现的错误，比如传入的参数，对于可接受可容忍的错误，我们会让参数以比如默认值的形式赋值并继续，但是对于不可容忍的错误，我们只能throw exception；</p>
-<p>在链式模式下出现的错误，因为链式模式的返回是this，所以一般情况的错误都会throw exception，要确保返回this，否则链式就会断；</p>
-<p>错误表现为宽容的处理，通过人为干预，让程序继续；异常表现为阻止和不处理，如果继续意味着真正的业务错误，所以让程序崩溃；</p>
-<p>对于底层类库的throw exception，一般是为了“防止使用不当”和“程序异常”而设置的“阻止”，并通过速错让错误暴露，比如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if (!$queue instanceof QueueInterface) &#123;</span><br><span class="line">    throw exception(&apos;...&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>比如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if (is_null($this-&gt;id)) &#123;</span><br><span class="line">    throw exception(&apos;...&apos;);</span><br><span class="line">&#125;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">异常是速错和崩溃不需要返回值，但是错误是值，所以它需要有返回值，比如：</span><br></pre></td></tr></table></figure></p>
-<p>if (!$this-&gt;id) {<br>    return false;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">不管因为错误返回false或返回null，那么一方面对于被调用方是要能预期的@return bool ture|false或者@return Object | null，另一方面错误消息的传递；</span><br><span class="line">由于错误是值，所以错误的返回值和错误消息其实是业务逻辑和程序设计组成的一部分；</span><br><span class="line">对于PHP的错误返回和表示一般会有以下3种方式：</span><br><span class="line">方式1：</span><br></pre></td></tr></table></figure></p>
-<p>function dosome() {<br>    if (empty($data)) {<br>        return [‘status’ =&gt; false, ‘msg’ =&gt; ‘something error’];<br>    }<br>    return [‘status’ =&gt; true, ‘data’ =&gt; $data];<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">方式2：</span><br></pre></td></tr></table></figure></p>
-<p>function dosome(&amp;$errmsg = null) {<br>    if (empty($data)) {<br>        $errmsg = ‘something error’;<br>        return false;<br>    }<br>    return true;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">方式3：</span><br></pre></td></tr></table></figure></p>
-<p>class Test<br>{<br>    protected $_errmsg;</p>
-<pre><code>public function dosome() {
-    if (empty($data)) {
-        $this-&gt;_errmsg = &apos;something error&apos;;
-        return false;
-    }
-    return true;
-}
-
-public function getErrmsg() {
-    return $this-&gt;_errmsg;
-}
-</code></pre><p>}<br>```<br>这里不提倡用方式1，像golang通过多返回值的形式，把error作为返回值的其中一个是可以的，但是只有一个返回值而返回带状态的数组这样的设计是糟糕的，除非返回值明确是为了返回错误信息；</p>
-<p>以上是一般原则，在实际开发中错误和异常会混用，在混用时候要以一般原则作为参考，结合实际情况而定；</p>
-
+        
+          <p class="article-more-link">
+            <a href="/2017/02/09/error-and-exception/#more">More...</a>
+          </p>
+        
       
 
       
