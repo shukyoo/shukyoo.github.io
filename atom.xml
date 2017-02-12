@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://fredyang.com/"/>
+  <link href="http://shukyoo.github.io/"/>
   <updated>2017-02-11T03:40:18.054Z</updated>
-  <id>http://fredyang.com/</id>
+  <id>http://shukyoo.github.io/</id>
   
   <author>
     <name>Fredyang</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>错误和异常</title>
-    <link href="http://fredyang.com/2017/02/09/error-and-exception/"/>
-    <id>http://fredyang.com/2017/02/09/error-and-exception/</id>
+    <link href="http://shukyoo.github.io/2017/02/09/error-and-exception/"/>
+    <id>http://shukyoo.github.io/2017/02/09/error-and-exception/</id>
     <published>2017-02-09T15:07:34.000Z</published>
     <updated>2017-02-11T03:40:18.054Z</updated>
     
@@ -73,21 +73,21 @@ public function getErrmsg() {
     
     </summary>
     
-      <category term="Thinking" scheme="http://fredyang.com/categories/Thinking/"/>
+      <category term="Thinking" scheme="http://shukyoo.github.io/categories/Thinking/"/>
     
     
-      <category term="error" scheme="http://fredyang.com/tags/error/"/>
+      <category term="error" scheme="http://shukyoo.github.io/tags/error/"/>
     
-      <category term="exception" scheme="http://fredyang.com/tags/exception/"/>
+      <category term="exception" scheme="http://shukyoo.github.io/tags/exception/"/>
     
-      <category term="php" scheme="http://fredyang.com/tags/php/"/>
+      <category term="php" scheme="http://shukyoo.github.io/tags/php/"/>
     
   </entry>
   
   <entry>
     <title>网站性能优化</title>
-    <link href="http://fredyang.com/2016/07/31/website-performance-optimization/"/>
-    <id>http://fredyang.com/2016/07/31/website-performance-optimization/</id>
+    <link href="http://shukyoo.github.io/2016/07/31/website-performance-optimization/"/>
+    <id>http://shukyoo.github.io/2016/07/31/website-performance-optimization/</id>
     <published>2016-07-31T15:08:25.000Z</published>
     <updated>2016-07-31T15:38:40.002Z</updated>
     
@@ -166,19 +166,19 @@ public function getErrmsg() {
     
     </summary>
     
-      <category term="Architecture" scheme="http://fredyang.com/categories/Architecture/"/>
+      <category term="Architecture" scheme="http://shukyoo.github.io/categories/Architecture/"/>
     
     
-      <category term="性能" scheme="http://fredyang.com/tags/%E6%80%A7%E8%83%BD/"/>
+      <category term="性能" scheme="http://shukyoo.github.io/tags/%E6%80%A7%E8%83%BD/"/>
     
-      <category term="performance" scheme="http://fredyang.com/tags/performance/"/>
+      <category term="performance" scheme="http://shukyoo.github.io/tags/performance/"/>
     
   </entry>
   
   <entry>
     <title>PHP PSR-3 Log Interface</title>
-    <link href="http://fredyang.com/2016/07/20/php-psr-3-log-interface/"/>
-    <id>http://fredyang.com/2016/07/20/php-psr-3-log-interface/</id>
+    <link href="http://shukyoo.github.io/2016/07/20/php-psr-3-log-interface/"/>
+    <id>http://shukyoo.github.io/2016/07/20/php-psr-3-log-interface/</id>
     <published>2016-07-20T14:28:09.000Z</published>
     <updated>2016-07-20T14:53:09.294Z</updated>
     
@@ -207,21 +207,21 @@ public function getErrmsg() {
     
     </summary>
     
-      <category term="PHP" scheme="http://fredyang.com/categories/PHP/"/>
+      <category term="PHP" scheme="http://shukyoo.github.io/categories/PHP/"/>
     
     
-      <category term="php" scheme="http://fredyang.com/tags/php/"/>
+      <category term="php" scheme="http://shukyoo.github.io/tags/php/"/>
     
-      <category term="psr-3" scheme="http://fredyang.com/tags/psr-3/"/>
+      <category term="psr-3" scheme="http://shukyoo.github.io/tags/psr-3/"/>
     
-      <category term="log interface" scheme="http://fredyang.com/tags/log-interface/"/>
+      <category term="log interface" scheme="http://shukyoo.github.io/tags/log-interface/"/>
     
   </entry>
   
   <entry>
     <title>做一个高效的程序员</title>
-    <link href="http://fredyang.com/2016/05/28/be-a-productive-programmer/"/>
-    <id>http://fredyang.com/2016/05/28/be-a-productive-programmer/</id>
+    <link href="http://shukyoo.github.io/2016/05/28/be-a-productive-programmer/"/>
+    <id>http://shukyoo.github.io/2016/05/28/be-a-productive-programmer/</id>
     <published>2016-05-28T14:19:33.000Z</published>
     <updated>2016-05-28T15:32:13.027Z</updated>
     
@@ -312,17 +312,17 @@ public function getErrmsg() {
     
     </summary>
     
-      <category term="Practice" scheme="http://fredyang.com/categories/Practice/"/>
+      <category term="Practice" scheme="http://shukyoo.github.io/categories/Practice/"/>
     
     
-      <category term="productive" scheme="http://fredyang.com/tags/productive/"/>
+      <category term="productive" scheme="http://shukyoo.github.io/tags/productive/"/>
     
   </entry>
   
   <entry>
     <title>PHP SPL Exceptions</title>
-    <link href="http://fredyang.com/2016/05/27/php-spl-exceptions/"/>
-    <id>http://fredyang.com/2016/05/27/php-spl-exceptions/</id>
+    <link href="http://shukyoo.github.io/2016/05/27/php-spl-exceptions/"/>
+    <id>http://shukyoo.github.io/2016/05/27/php-spl-exceptions/</id>
     <published>2016-05-27T01:08:58.000Z</published>
     <updated>2016-05-27T12:59:17.141Z</updated>
     
@@ -350,21 +350,21 @@ public function getErrmsg() {
     
     </summary>
     
-      <category term="PHP" scheme="http://fredyang.com/categories/PHP/"/>
+      <category term="PHP" scheme="http://shukyoo.github.io/categories/PHP/"/>
     
     
-      <category term="exception" scheme="http://fredyang.com/tags/exception/"/>
+      <category term="exception" scheme="http://shukyoo.github.io/tags/exception/"/>
     
-      <category term="php" scheme="http://fredyang.com/tags/php/"/>
+      <category term="php" scheme="http://shukyoo.github.io/tags/php/"/>
     
-      <category term="spl" scheme="http://fredyang.com/tags/spl/"/>
+      <category term="spl" scheme="http://shukyoo.github.io/tags/spl/"/>
     
   </entry>
   
   <entry>
     <title>PDO::FETCH_*常量解释和示例</title>
-    <link href="http://fredyang.com/2016/05/26/pdo-fetch-mode-constants/"/>
-    <id>http://fredyang.com/2016/05/26/pdo-fetch-mode-constants/</id>
+    <link href="http://shukyoo.github.io/2016/05/26/pdo-fetch-mode-constants/"/>
+    <id>http://shukyoo.github.io/2016/05/26/pdo-fetch-mode-constants/</id>
     <published>2016-05-26T13:07:38.000Z</published>
     <updated>2016-05-26T13:20:00.182Z</updated>
     
@@ -412,19 +412,19 @@ public function getErrmsg() {
     
     </summary>
     
-      <category term="PHP" scheme="http://fredyang.com/categories/PHP/"/>
+      <category term="PHP" scheme="http://shukyoo.github.io/categories/PHP/"/>
     
     
-      <category term="php" scheme="http://fredyang.com/tags/php/"/>
+      <category term="php" scheme="http://shukyoo.github.io/tags/php/"/>
     
-      <category term="pdo" scheme="http://fredyang.com/tags/pdo/"/>
+      <category term="pdo" scheme="http://shukyoo.github.io/tags/pdo/"/>
     
   </entry>
   
   <entry>
     <title>编程哲言</title>
-    <link href="http://fredyang.com/2016/05/25/coding-philosophy/"/>
-    <id>http://fredyang.com/2016/05/25/coding-philosophy/</id>
+    <link href="http://shukyoo.github.io/2016/05/25/coding-philosophy/"/>
+    <id>http://shukyoo.github.io/2016/05/25/coding-philosophy/</id>
     <published>2016-05-25T13:37:55.000Z</published>
     <updated>2016-05-26T13:58:36.036Z</updated>
     
@@ -462,19 +462,19 @@ public function getErrmsg() {
     
     </summary>
     
-      <category term="Thinking" scheme="http://fredyang.com/categories/Thinking/"/>
+      <category term="Thinking" scheme="http://shukyoo.github.io/categories/Thinking/"/>
     
     
-      <category term="philosophy" scheme="http://fredyang.com/tags/philosophy/"/>
+      <category term="funny" scheme="http://shukyoo.github.io/tags/funny/"/>
     
-      <category term="funny" scheme="http://fredyang.com/tags/funny/"/>
+      <category term="philosophy" scheme="http://shukyoo.github.io/tags/philosophy/"/>
     
   </entry>
   
   <entry>
     <title>PHP代码规范精要</title>
-    <link href="http://fredyang.com/2016/05/25/php-code-standard-essential/"/>
-    <id>http://fredyang.com/2016/05/25/php-code-standard-essential/</id>
+    <link href="http://shukyoo.github.io/2016/05/25/php-code-standard-essential/"/>
+    <id>http://shukyoo.github.io/2016/05/25/php-code-standard-essential/</id>
     <published>2016-05-25T01:23:41.000Z</published>
     <updated>2016-05-25T13:41:40.767Z</updated>
     
@@ -555,19 +555,19 @@ public function getErrmsg() {
     
     </summary>
     
-      <category term="PHP" scheme="http://fredyang.com/categories/PHP/"/>
+      <category term="PHP" scheme="http://shukyoo.github.io/categories/PHP/"/>
     
     
-      <category term="php" scheme="http://fredyang.com/tags/php/"/>
+      <category term="php" scheme="http://shukyoo.github.io/tags/php/"/>
     
-      <category term="code standard" scheme="http://fredyang.com/tags/code-standard/"/>
+      <category term="code standard" scheme="http://shukyoo.github.io/tags/code-standard/"/>
     
   </entry>
   
   <entry>
     <title>PHP底层接口</title>
-    <link href="http://fredyang.com/2016/05/24/php-low-layer-interface/"/>
-    <id>http://fredyang.com/2016/05/24/php-low-layer-interface/</id>
+    <link href="http://shukyoo.github.io/2016/05/24/php-low-layer-interface/"/>
+    <id>http://shukyoo.github.io/2016/05/24/php-low-layer-interface/</id>
     <published>2016-05-24T15:35:56.000Z</published>
     <updated>2016-05-25T01:14:02.387Z</updated>
     
@@ -593,19 +593,19 @@ public function getErrmsg() {
     
     </summary>
     
-      <category term="PHP" scheme="http://fredyang.com/categories/PHP/"/>
+      <category term="PHP" scheme="http://shukyoo.github.io/categories/PHP/"/>
     
     
-      <category term="php" scheme="http://fredyang.com/tags/php/"/>
+      <category term="php" scheme="http://shukyoo.github.io/tags/php/"/>
     
-      <category term="low-layer interface" scheme="http://fredyang.com/tags/low-layer-interface/"/>
+      <category term="low-layer interface" scheme="http://shukyoo.github.io/tags/low-layer-interface/"/>
     
   </entry>
   
   <entry>
     <title>MySQL复合索引使用需知</title>
-    <link href="http://fredyang.com/2016/05/24/note-about-mysql-multiple-column-indexes/"/>
-    <id>http://fredyang.com/2016/05/24/note-about-mysql-multiple-column-indexes/</id>
+    <link href="http://shukyoo.github.io/2016/05/24/note-about-mysql-multiple-column-indexes/"/>
+    <id>http://shukyoo.github.io/2016/05/24/note-about-mysql-multiple-column-indexes/</id>
     <published>2016-05-24T14:59:57.000Z</published>
     <updated>2016-05-25T01:11:49.641Z</updated>
     
@@ -630,19 +630,19 @@ public function getErrmsg() {
     
     </summary>
     
-      <category term="Database" scheme="http://fredyang.com/categories/Database/"/>
+      <category term="Database" scheme="http://shukyoo.github.io/categories/Database/"/>
     
     
-      <category term="mysql" scheme="http://fredyang.com/tags/mysql/"/>
+      <category term="mysql" scheme="http://shukyoo.github.io/tags/mysql/"/>
     
-      <category term="multiple-column indexes" scheme="http://fredyang.com/tags/multiple-column-indexes/"/>
+      <category term="multiple-column indexes" scheme="http://shukyoo.github.io/tags/multiple-column-indexes/"/>
     
   </entry>
   
   <entry>
     <title>有意思的定理和法则</title>
-    <link href="http://fredyang.com/2016/05/23/funny-rules-and-effects/"/>
-    <id>http://fredyang.com/2016/05/23/funny-rules-and-effects/</id>
+    <link href="http://shukyoo.github.io/2016/05/23/funny-rules-and-effects/"/>
+    <id>http://shukyoo.github.io/2016/05/23/funny-rules-and-effects/</id>
     <published>2016-05-23T11:01:54.000Z</published>
     <updated>2016-05-26T13:58:31.341Z</updated>
     
@@ -679,21 +679,21 @@ public function getErrmsg() {
     
     </summary>
     
-      <category term="Thinking" scheme="http://fredyang.com/categories/Thinking/"/>
+      <category term="Thinking" scheme="http://shukyoo.github.io/categories/Thinking/"/>
     
     
-      <category term="funny" scheme="http://fredyang.com/tags/funny/"/>
+      <category term="social" scheme="http://shukyoo.github.io/tags/social/"/>
     
-      <category term="social" scheme="http://fredyang.com/tags/social/"/>
+      <category term="psychological" scheme="http://shukyoo.github.io/tags/psychological/"/>
     
-      <category term="psychological" scheme="http://fredyang.com/tags/psychological/"/>
+      <category term="funny" scheme="http://shukyoo.github.io/tags/funny/"/>
     
   </entry>
   
   <entry>
     <title>hello my first post</title>
-    <link href="http://fredyang.com/2016/05/22/hello-my-first-post/"/>
-    <id>http://fredyang.com/2016/05/22/hello-my-first-post/</id>
+    <link href="http://shukyoo.github.io/2016/05/22/hello-my-first-post/"/>
+    <id>http://shukyoo.github.io/2016/05/22/hello-my-first-post/</id>
     <published>2016-05-22T12:11:33.000Z</published>
     <updated>2016-05-25T01:15:32.233Z</updated>
     
@@ -713,8 +713,8 @@ public function getErrmsg() {
   
   <entry>
     <title>Hello World</title>
-    <link href="http://fredyang.com/2016/05/22/hello-world/"/>
-    <id>http://fredyang.com/2016/05/22/hello-world/</id>
+    <link href="http://shukyoo.github.io/2016/05/22/hello-world/"/>
+    <id>http://shukyoo.github.io/2016/05/22/hello-world/</id>
     <published>2016-05-22T11:38:59.069Z</published>
     <updated>2016-05-22T11:38:59.071Z</updated>
     

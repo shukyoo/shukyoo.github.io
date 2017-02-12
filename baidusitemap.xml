@@ -4,7 +4,7 @@
 
     
   <url>
-    <loc>http://fredyang.com/2017/02/09/error-and-exception/</loc>
+    <loc>http://shukyoo.github.io/2017/02/09/error-and-exception/</loc>
     <lastmod>2017-02-11T03:40:18.054Z</lastmod>
     <data>
         <display>
@@ -20,7 +20,7 @@
          
            
              
-              <breadCrumb title="Thinking" url="http://fredyang.com/categories/Thinking/"/>
+              <breadCrumb title="Thinking" url="http://shukyoo.github.io/categories/Thinking/"/>
           
         </display>
     </data>
@@ -28,7 +28,7 @@
 
     
   <url>
-    <loc>http://fredyang.com/2016/07/31/website-performance-optimization/</loc>
+    <loc>http://shukyoo.github.io/2016/07/31/website-performance-optimization/</loc>
     <lastmod>2016-07-31T15:38:40.002Z</lastmod>
     <data>
         <display>
@@ -42,7 +42,7 @@
          
            
              
-              <breadCrumb title="Architecture" url="http://fredyang.com/categories/Architecture/"/>
+              <breadCrumb title="Architecture" url="http://shukyoo.github.io/categories/Architecture/"/>
           
         </display>
     </data>
@@ -50,7 +50,7 @@
 
     
   <url>
-    <loc>http://fredyang.com/2016/07/20/php-psr-3-log-interface/</loc>
+    <loc>http://shukyoo.github.io/2016/07/20/php-psr-3-log-interface/</loc>
     <lastmod>2016-07-20T14:53:09.294Z</lastmod>
     <data>
         <display>
@@ -66,7 +66,7 @@
          
            
              
-              <breadCrumb title="PHP" url="http://fredyang.com/categories/PHP/"/>
+              <breadCrumb title="PHP" url="http://shukyoo.github.io/categories/PHP/"/>
           
         </display>
     </data>
@@ -74,7 +74,7 @@
 
     
   <url>
-    <loc>http://fredyang.com/2016/05/28/be-a-productive-programmer/</loc>
+    <loc>http://shukyoo.github.io/2016/05/28/be-a-productive-programmer/</loc>
     <lastmod>2016-05-28T15:32:13.027Z</lastmod>
     <data>
         <display>
@@ -86,7 +86,7 @@
          
            
              
-              <breadCrumb title="Practice" url="http://fredyang.com/categories/Practice/"/>
+              <breadCrumb title="Practice" url="http://shukyoo.github.io/categories/Practice/"/>
           
         </display>
     </data>
@@ -94,7 +94,7 @@
 
     
   <url>
-    <loc>http://fredyang.com/2016/05/27/php-spl-exceptions/</loc>
+    <loc>http://shukyoo.github.io/2016/05/27/php-spl-exceptions/</loc>
     <lastmod>2016-05-27T12:59:17.141Z</lastmod>
     <data>
         <display>
@@ -110,7 +110,7 @@
          
            
              
-              <breadCrumb title="PHP" url="http://fredyang.com/categories/PHP/"/>
+              <breadCrumb title="PHP" url="http://shukyoo.github.io/categories/PHP/"/>
           
         </display>
     </data>
@@ -118,21 +118,21 @@
 
     
   <url>
-    <loc>http://fredyang.com/2016/05/25/coding-philosophy/</loc>
+    <loc>http://shukyoo.github.io/2016/05/25/coding-philosophy/</loc>
     <lastmod>2016-05-26T13:58:36.036Z</lastmod>
     <data>
         <display>
         <title>编程哲言</title>
         <pubTime>2016-05-25T13:37:55.000Z</pubTime>
         
-        <tag>philosophy</tag>
-         
         <tag>funny</tag>
+         
+        <tag>philosophy</tag>
          
          
            
              
-              <breadCrumb title="Thinking" url="http://fredyang.com/categories/Thinking/"/>
+              <breadCrumb title="Thinking" url="http://shukyoo.github.io/categories/Thinking/"/>
           
         </display>
     </data>
@@ -140,23 +140,23 @@
 
     
   <url>
-    <loc>http://fredyang.com/2016/05/23/funny-rules-and-effects/</loc>
+    <loc>http://shukyoo.github.io/2016/05/23/funny-rules-and-effects/</loc>
     <lastmod>2016-05-26T13:58:31.341Z</lastmod>
     <data>
         <display>
         <title>有意思的定理和法则</title>
         <pubTime>2016-05-23T11:01:54.000Z</pubTime>
         
-        <tag>funny</tag>
-         
         <tag>social</tag>
          
         <tag>psychological</tag>
          
+        <tag>funny</tag>
+         
          
            
              
-              <breadCrumb title="Thinking" url="http://fredyang.com/categories/Thinking/"/>
+              <breadCrumb title="Thinking" url="http://shukyoo.github.io/categories/Thinking/"/>
           
         </display>
     </data>
@@ -164,7 +164,7 @@
 
     
   <url>
-    <loc>http://fredyang.com/2016/05/26/pdo-fetch-mode-constants/</loc>
+    <loc>http://shukyoo.github.io/2016/05/26/pdo-fetch-mode-constants/</loc>
     <lastmod>2016-05-26T13:20:00.182Z</lastmod>
     <data>
         <display>
@@ -178,7 +178,7 @@
          
            
              
-              <breadCrumb title="PHP" url="http://fredyang.com/categories/PHP/"/>
+              <breadCrumb title="PHP" url="http://shukyoo.github.io/categories/PHP/"/>
           
         </display>
     </data>
@@ -186,7 +186,7 @@
 
     
   <url>
-    <loc>http://fredyang.com/2016/05/25/php-code-standard-essential/</loc>
+    <loc>http://shukyoo.github.io/2016/05/25/php-code-standard-essential/</loc>
     <lastmod>2016-05-25T13:41:40.767Z</lastmod>
     <data>
         <display>
@@ -200,7 +200,7 @@
          
            
              
-              <breadCrumb title="PHP" url="http://fredyang.com/categories/PHP/"/>
+              <breadCrumb title="PHP" url="http://shukyoo.github.io/categories/PHP/"/>
           
         </display>
     </data>
@@ -208,7 +208,7 @@
 
     
   <url>
-    <loc>http://fredyang.com/2016/05/22/hello-my-first-post/</loc>
+    <loc>http://shukyoo.github.io/2016/05/22/hello-my-first-post/</loc>
     <lastmod>2016-05-25T01:15:32.233Z</lastmod>
     <data>
         <display>
@@ -223,7 +223,7 @@
 
     
   <url>
-    <loc>http://fredyang.com/2016/05/24/php-low-layer-interface/</loc>
+    <loc>http://shukyoo.github.io/2016/05/24/php-low-layer-interface/</loc>
     <lastmod>2016-05-25T01:14:02.387Z</lastmod>
     <data>
         <display>
@@ -237,7 +237,7 @@
          
            
              
-              <breadCrumb title="PHP" url="http://fredyang.com/categories/PHP/"/>
+              <breadCrumb title="PHP" url="http://shukyoo.github.io/categories/PHP/"/>
           
         </display>
     </data>
@@ -245,7 +245,7 @@
 
     
   <url>
-    <loc>http://fredyang.com/2016/05/24/note-about-mysql-multiple-column-indexes/</loc>
+    <loc>http://shukyoo.github.io/2016/05/24/note-about-mysql-multiple-column-indexes/</loc>
     <lastmod>2016-05-25T01:11:49.641Z</lastmod>
     <data>
         <display>
@@ -259,7 +259,7 @@
          
            
              
-              <breadCrumb title="Database" url="http://fredyang.com/categories/Database/"/>
+              <breadCrumb title="Database" url="http://shukyoo.github.io/categories/Database/"/>
           
         </display>
     </data>
@@ -269,7 +269,7 @@
     
     
   <url>
-    <loc>http://fredyang.com/2016/05/22/hello-world/</loc>
+    <loc>http://shukyoo.github.io/2016/05/22/hello-world/</loc>
     <lastmod>2016-05-22T11:38:59.071Z</lastmod>
     <data>
         <display>
