@@ -444,9 +444,9 @@
       <category term="Thinking" scheme="http://shukyoo.github.io/categories/Thinking/"/>
     
     
-      <category term="philosophy" scheme="http://shukyoo.github.io/tags/philosophy/"/>
-    
       <category term="funny" scheme="http://shukyoo.github.io/tags/funny/"/>
+    
+      <category term="philosophy" scheme="http://shukyoo.github.io/tags/philosophy/"/>
     
   </entry>
   
@@ -661,11 +661,11 @@
       <category term="Thinking" scheme="http://shukyoo.github.io/categories/Thinking/"/>
     
     
-      <category term="funny" scheme="http://shukyoo.github.io/tags/funny/"/>
-    
       <category term="social" scheme="http://shukyoo.github.io/tags/social/"/>
     
       <category term="psychological" scheme="http://shukyoo.github.io/tags/psychological/"/>
+    
+      <category term="funny" scheme="http://shukyoo.github.io/tags/funny/"/>
     
   </entry>
   
