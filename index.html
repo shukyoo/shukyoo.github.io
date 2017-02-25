@@ -67,11 +67,7 @@
 <ol>
 <li>用户登录输错密码，这个是错误还是异常？</li>
 <li>用户充值10元，结果给用户充了20元进去，这个是错误还是异常？</li>
-<li>用户要上传文件，结果因为文件格式不正确上传失败了，这个是错误还是异常？又如果因为网络原因上传失败了，这个是错误还是异常？</li>
-<li>开发在实例一个User类的时候，要传int类型的id值进行构造，结果传了一个字符串，这个是错误还是异常？</li>
-<li>程序要调用第三方接口，结果因各种原因调用失败，这个是错误还是异常？</li>
-<li>数据保存失败，这个是错误还是异常？</li>
-</ol>
+<li>用户要上传文件，结果因为文件格式不正确上传失败了，这个是错误还是异常？又如果因为网络原因上传失败了，这个是错误还是异常？
         
           <p class="article-more-link">
             <a href="/2017/02/09/error-and-exception/#more">More...</a>
@@ -120,15 +116,7 @@
 <li>减少http请求</li>
 <li>压缩静态资源</li>
 <li>增加静态资源域名</li>
-<li>异步加载</li>
-<li>Lazy Load（JS和图片）</li>
-<li>本地缓存</li>
-<li>压缩图片</li>
-<li>gzip传输</li>
-<li>压缩html</li>
-<li>css sprite</li>
-<li>JS脚本放到页脚</li>
-<li>避免html图片缩放（大图当小图用）
+<li>异步加载
         
           <p class="article-more-link">
             <a href="/2016/07/31/website-performance-optimization/#more">More...</a>
@@ -224,14 +212,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>我们要懒出水平，更多的事情要让机器去做。</p>
-<p>《卓有成效的程序员》这本书可以看一下。</p>
+<p>《卓有成效的程序员》这本书可以看一下。<br><img title="卓有成效的程序员" alt="卓有成效的程序员" src="http://7vzt25.com1.z0.glb.clouddn.com/static/images/the_productive_programmer.jpg"></p>
 <p>基于我的实践和感悟，以下是我的认识和总结：</p>
-<p><strong>首先我们需要有好的硬件；</strong></p>
-<ul>
-<li>高配电脑和好的系统，首推Mac笔记本或MiniMac，其次是Linux，最后才是Windows；</li>
-<li>最好有两台显示器；</li>
-<li>机械键盘，我们可能是敲键盘最多的行业；</li>
-</ul>
         
           <p class="article-more-link">
             <a href="/2016/05/28/be-a-productive-programmer/#more">More...</a>
@@ -369,7 +351,6 @@
         <p>Premature optimization is the root of all evil<br>过早优化是万恶之源</p>
 <p>Walking on water and developing software from a specification are easy if both are frozen<br>在水上行走和按需求开发软件将都会很容易，如果这两者都是冻结的话</p>
 <p>It always takes longer than you expect, even when you take into account Hofstadter’s Law<br>侯世达定律: 做事所花费的时间总是比你预期的要长，即使你的预期中考虑了侯世达定律</p>
-<p>Some people, when confronted with a problem, think “I know, I’ll use regular expressions.” Now they have two problems<br>如果碰到一个问题，心里在想“我知道这个问题，我将会用正则表达式来解决它”，那么接下来他将面对两个问题。</p>
         
           <p class="article-more-link">
             <a href="/2016/05/25/coding-philosophy/#more">More...</a>
@@ -414,8 +395,6 @@
       
         <p>PHP详细代码规范建议参考PHP FIG的PSR-0, PSR-1, PSR-2, PSR-3, PSR-4的相关规范文档，具体参考网站：<br><a href="http://www.php-fig.org/" title="PHP FIG官网">PHP FIG官网</a><br><a href="https://github.com/php-fig/fig-standards" title="FIG-Standards in github">FIG-Standards in github</a><br><a href="https://github.com/hfcorriez/fig-standards" title="fig-standards中文翻译">fig-standards中文翻译</a></p>
 <p>以下是我参考相关文档和开源代码，并结合自身的开发实践，作的PHP代码规范提炼和精简。</p>
-<p><strong>示例代码</strong></p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">namespace</span> <span class="title">App</span>\<span class="title">Test</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">use</span> <span class="title">Yii</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">helpers</span>\<span class="title">Helper</span>;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * 一些说明</span><br><span class="line"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloWorldTest</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> KIND_ = <span class="string">'red'</span>;</span><br><span class="line">    <span class="keyword">const</span> COLOR_BLUE = <span class="string">'blue'</span>;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">public</span> $user_name;</span><br><span class="line">    <span class="keyword">protected</span> $_age;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * 方法注释</span><br><span class="line">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getUserAge</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        $test_var = <span class="keyword">$this</span>-&gt;_age;</span><br><span class="line">        <span class="keyword">if</span> (!$test_var) &#123;</span><br><span class="line">            $test_var = <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> $test_var;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * 方法注释</span><br><span class="line">     * <span class="doctag">@param</span> array $test_arr</span><br><span class="line">     * <span class="doctag">@return</span> array</span><br><span class="line">     */</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">_testSomething</span><span class="params">(array $test_arr)</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        $result = [];</span><br><span class="line">        <span class="keyword">foreach</span> ($test_arr <span class="keyword">as</span> $k =&gt; $item) &#123;</span><br><span class="line">            <span class="keyword">if</span> ($k &gt; <span class="number">2</span>) &#123;</span><br><span class="line">                $result[] = $item;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> $result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * 函数说明</span><br><span class="line"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">check_number_valid</span><span class="params">($call)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    $number = $call();</span><br><span class="line">    <span class="keyword">return</span> ($number &gt; <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * 匿名函数调用</span><br><span class="line"> */</span></span><br><span class="line">check_number_valid(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">10</span>;</span><br><span class="line">&#125;);</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">// 常量声明</span></span><br><span class="line">define(<span class="string">'MY_TEST_NAME'</span>, <span class="string">'aaa'</span>);</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 变量使用</span></span><br><span class="line">$hello_test = <span class="string">'hello'</span>;</span><br><span class="line">$hello_str = <span class="string">'say '</span>. $hello_test .<span class="string">' world'</span>;</span><br><span class="line">$test_arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">$test_long_arr = <span class="keyword">array</span>(</span><br><span class="line">    <span class="string">'kk_aa'</span> =&gt; <span class="number">11</span>,</span><br><span class="line">    <span class="string">'kk_bb'</span> =&gt; <span class="number">22</span>,</span><br><span class="line">    <span class="string">'kk_cc'</span> =&gt; <span class="number">33</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
         
           <p class="article-more-link">
             <a href="/2016/05/25/php-code-standard-essential/#more">More...</a>
@@ -461,17 +440,11 @@
         <p>通过继承和实现PHP的底层接口可以统一接口行为，实现底层特性。 </p>
 <p><strong>一，Traversable</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Traversable&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>这个接口没有任何方法，它的作用仅仅是作为所有可遍历类的基本接口，不能被实现，只能通过实现Interator或InteratorAggregate而实现。 </p>
-<p><strong>二，Interator </strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Iterator extends Traversable &#123;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> mixed current ( void )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> scalar key ( void )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> void next ( void )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> void rewind ( void )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> boolean valid ( void )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>可实现基本的迭代功能。 </p>
-<p><strong>三，InteratorAggregate </strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">IteratorAggregate extends Traversable &#123;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> Traversable getIterator ( void )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>聚合迭代器，通过部署InteratorAggregate将数据和遍历分离。 </p>
-<p><strong>四，ArrayAccess</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ArrayAccess &#123;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> boolean offsetExists ( mixed $offset )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> mixed offsetGet ( mixed $offset )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> void offsetSet ( mixed $offset , mixed $value )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> void offsetUnset ( mixed $offset )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>可以像数组一样操作自已的类 </p>
-<p><strong>五，Serializable</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Serializable &#123;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> string serialize ( void )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> mixed unserialize ( string $serialized )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>自定义序列化实现 </p>
-<p><strong>六，Countable</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Countable &#123;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> int count ( void )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>实现count计算 </p>
-
+        
+          <p class="article-more-link">
+            <a href="/2016/05/24/php-low-layer-interface/#more">More...</a>
+          </p>
+        
       
 
       

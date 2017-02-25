@@ -7,23 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="通过继承和实现PHP的底层接口可以统一接口行为，实现底层特性。 
 一，Traversable12Traversable&amp;#123;&amp;#125;
-这个接口没有任何方法，它的作用仅仅是作为所有可遍历类的基本接口，不能被实现，只能通过实现Interator或InteratorAggregate而实现。 
-二，Interator 1234567Iterator extends Traversable &amp;#">
+这个接口没有任何方法，它的作用仅仅是作为所有可遍历类的基本接口，不能被实现，只能通过实现Interator或InteratorAggregate而实现。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PHP底层接口">
 <meta property="og:url" content="http://shukyoo.github.io/2016/05/24/php-low-layer-interface/index.html">
 <meta property="og:site_name" content="FREDYANG">
 <meta property="og:description" content="通过继承和实现PHP的底层接口可以统一接口行为，实现底层特性。 
 一，Traversable12Traversable&amp;#123;&amp;#125;
-这个接口没有任何方法，它的作用仅仅是作为所有可遍历类的基本接口，不能被实现，只能通过实现Interator或InteratorAggregate而实现。 
-二，Interator 1234567Iterator extends Traversable &amp;#">
-<meta property="og:updated_time" content="2016-05-25T01:14:02.387Z">
+这个接口没有任何方法，它的作用仅仅是作为所有可遍历类的基本接口，不能被实现，只能通过实现Interator或InteratorAggregate而实现。">
+<meta property="og:updated_time" content="2017-02-25T04:52:06.011Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PHP底层接口">
 <meta name="twitter:description" content="通过继承和实现PHP的底层接口可以统一接口行为，实现底层特性。 
 一，Traversable12Traversable&amp;#123;&amp;#125;
-这个接口没有任何方法，它的作用仅仅是作为所有可遍历类的基本接口，不能被实现，只能通过实现Interator或InteratorAggregate而实现。 
-二，Interator 1234567Iterator extends Traversable &amp;#">
+这个接口没有任何方法，它的作用仅仅是作为所有可遍历类的基本接口，不能被实现，只能通过实现Interator或InteratorAggregate而实现。">
   
     <link rel="alternative" href="/atom.xml" title="FREDYANG" type="application/atom+xml">
   
@@ -68,6 +65,7 @@
         <p>通过继承和实现PHP的底层接口可以统一接口行为，实现底层特性。 </p>
 <p><strong>一，Traversable</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Traversable&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>这个接口没有任何方法，它的作用仅仅是作为所有可遍历类的基本接口，不能被实现，只能通过实现Interator或InteratorAggregate而实现。 </p>
+<a id="more"></a>
 <p><strong>二，Interator </strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Iterator extends Traversable &#123;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> mixed current ( void )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> scalar key ( void )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> void next ( void )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> void rewind ( void )</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> boolean valid ( void )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>可实现基本的迭代功能。 </p>
 <p><strong>三，InteratorAggregate </strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">IteratorAggregate extends Traversable &#123;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> Traversable getIterator ( void )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
