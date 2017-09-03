@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://shukyoo.github.io/2017/02/09/error-and-exception/</loc>
-    <lastmod>2017-02-25T04:53:44.663Z</lastmod>
+    <lastmod>2017-09-02T15:41:36.623Z</lastmod>
     <data>
         <display>
         <title>错误和异常</title>
@@ -22,6 +22,21 @@
              
               <breadCrumb title="Thinking" url="http://shukyoo.github.io/categories/Thinking/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://shukyoo.github.io/2017/05/15/SSL-Connect-Error-Solution/</loc>
+    <lastmod>2017-05-15T03:55:59.733Z</lastmod>
+    <data>
+        <display>
+        <title>SSL Connect Error Solution</title>
+        <pubTime>2017-05-15T03:52:56.000Z</pubTime>
+        
+         
+           
         </display>
     </data>
     </url>
@@ -57,9 +72,9 @@
         <title>编程哲言</title>
         <pubTime>2016-05-25T13:37:55.000Z</pubTime>
         
-        <tag>funny</tag>
-         
         <tag>philosophy</tag>
+         
+        <tag>funny</tag>
          
          
            
@@ -191,11 +206,11 @@
         <title>有意思的定理和法则</title>
         <pubTime>2016-05-23T11:01:54.000Z</pubTime>
         
+        <tag>funny</tag>
+         
         <tag>social</tag>
          
         <tag>psychological</tag>
-         
-        <tag>funny</tag>
          
          
            

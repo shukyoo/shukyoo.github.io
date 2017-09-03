@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>SSL Connect Error Solution | FREDYANG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="curl  -v ‘https://mpos.quanminfu.com:6004/merFrontMgr/orderQuerySerlet‘                                  
+
+About to connect() to mpos.quanminfu.com port 6004 (#0)
+Trying 180.169.95.130… connected
+Conn">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SSL Connect Error Solution">
+<meta property="og:url" content="http://shukyoo.github.io/2017/05/15/SSL-Connect-Error-Solution/index.html">
+<meta property="og:site_name" content="FREDYANG">
+<meta property="og:description" content="curl  -v ‘https://mpos.quanminfu.com:6004/merFrontMgr/orderQuerySerlet‘                                  
+
+About to connect() to mpos.quanminfu.com port 6004 (#0)
+Trying 180.169.95.130… connected
+Conn">
+<meta property="og:updated_time" content="2017-05-15T03:55:59.733Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SSL Connect Error Solution">
+<meta name="twitter:description" content="curl  -v ‘https://mpos.quanminfu.com:6004/merFrontMgr/orderQuerySerlet‘                                  
+
+About to connect() to mpos.quanminfu.com port 6004 (#0)
+Trying 180.169.95.130… connected
+Conn">
+  
+    <link rel="alternative" href="/atom.xml" title="FREDYANG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <section id="main"><article id="post-SSL-Connect-Error-Solution" class="article article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      SSL Connect Error Solution
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2017/05/15/SSL-Connect-Error-Solution/" class="article-date">
+  <time datetime="2017-05-15T03:52:56.000Z" itemprop="datePublished">2017-05-15</time>
+</a>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>curl  -v ‘<a href="https://mpos.quanminfu.com:6004/merFrontMgr/orderQuerySerlet" target="_blank" rel="external">https://mpos.quanminfu.com:6004/merFrontMgr/orderQuerySerlet</a>‘                                  </p>
+<ul>
+<li>About to connect() to mpos.quanminfu.com port 6004 (#0)</li>
+<li>Trying 180.169.95.130… connected</li>
+<li>Connected to mpos.quanminfu.com (180.169.95.130) port 6004 (#0)</li>
+<li>Initializing NSS with certpath: sql:/etc/pki/nssdb</li>
+<li>CAfile: /etc/pki/tls/certs/ca-bundle.crt<br>CApath: none</li>
+<li>NSS error -12173</li>
+<li>Closing connection #0</li>
+<li>SSL connect error<br>curl: (35) SSL connect error</li>
+</ul>
+<p>引起：<br>升级了nss（Network Security Service），从3.15 -&gt; 3.19，导致全民付ssl无法连接<br>NSS error -12173  :  SSL handshake failed</p>
+<p>直接原因：<br>全民付ssl版本过低</p>
+<p>解决方法：<br>curl_setopt($curl, CURLOPT_SSL_CIPHER_LIST, ‘rsa_aes_128_sha’);</p>
+
+      
+
+      
+        
+    </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/02/09/error-and-exception/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">错误和异常</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="post-SSL-Connect-Error-Solution" data-title="SSL Connect Error Solution" data-url="http://shukyoo.github.io/2017/05/15/SSL-Connect-Error-Solution/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"fredyang"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+</section>
+</section>
+        <aside id="sidebar">
+  <nav class="menus">
+  	<ul>
+  		<li><a href="/"><i class="icon icon-home"></i></a></li>
+  		
+			<li><a href="/archives"><i class="icon icon-fenlei"></i></a></li>
+  		
+  		
+			<li><a href="/tags"><i class="icon icon-tag"></i></a></li>
+  		
+  		
+  	</ul>
+  </nav>
+  <a id="go-top" href="#"><i class="icon icon-up"></i></a>
+</aside>
+      </div>
+      <footer id="footer">
+  
+	<div id="footer-info" class="inner">
+	  &copy; 2017 Fredyang 
+	  - Hosted on <a href="https://github.com/" target="_blank">Github</a>
+	  - Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	  - Contact me: shuky2000#163.com
+	</div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tag</a>
+  
+    <a href="/" class="mobile-nav-link">Github</a>
+  
+</nav>
+    
+
+<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
