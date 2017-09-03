@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>json-api接口规范和示例 | FREDYANG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="JSON API规范参考：http://jsonapi.org/
+一般性接口规范实践示例：
+格式：code:0 代表成功data里是数据meta里是其它元数据12345&amp;#123;  &quot;code&quot;: 0,  &quot;data&quot;: [],  &quot;meta&quot;: []&amp;#125;
+成功单项：1234567&amp;#123;  &quot;code&quot;: 0,  &quot;data&quot;: &amp;#123;    &quot;id&quot;: 123,    &quot;n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="json-api接口规范和示例">
+<meta property="og:url" content="http://shukyoo.github.io/2017/09/03/json-api/index.html">
+<meta property="og:site_name" content="FREDYANG">
+<meta property="og:description" content="JSON API规范参考：http://jsonapi.org/
+一般性接口规范实践示例：
+格式：code:0 代表成功data里是数据meta里是其它元数据12345&amp;#123;  &quot;code&quot;: 0,  &quot;data&quot;: [],  &quot;meta&quot;: []&amp;#125;
+成功单项：1234567&amp;#123;  &quot;code&quot;: 0,  &quot;data&quot;: &amp;#123;    &quot;id&quot;: 123,    &quot;n">
+<meta property="og:updated_time" content="2017-09-03T09:57:36.616Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="json-api接口规范和示例">
+<meta name="twitter:description" content="JSON API规范参考：http://jsonapi.org/
+一般性接口规范实践示例：
+格式：code:0 代表成功data里是数据meta里是其它元数据12345&amp;#123;  &quot;code&quot;: 0,  &quot;data&quot;: [],  &quot;meta&quot;: []&amp;#125;
+成功单项：1234567&amp;#123;  &quot;code&quot;: 0,  &quot;data&quot;: &amp;#123;    &quot;id&quot;: 123,    &quot;n">
+  
+    <link rel="alternative" href="/atom.xml" title="FREDYANG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <section id="main"><article id="post-json-api" class="article article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      json-api接口规范和示例
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2017/09/03/json-api/" class="article-date">
+  <time datetime="2017-09-03T09:42:34.000Z" itemprop="datePublished">2017-09-03</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Design/">Design</a>
+  </div>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>JSON API规范参考：<a href="http://jsonapi.org/" target="_blank" rel="external">http://jsonapi.org/</a></p>
+<p>一般性接口规范实践示例：</p>
+<p>格式：<br>code:0 代表成功<br>data里是数据<br>meta里是其它元数据<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"code"</span>: <span class="number">0</span>,</span><br><span class="line">  <span class="string">"data"</span>: [],</span><br><span class="line">  <span class="string">"meta"</span>: []</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>成功单项：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"code"</span>: <span class="number">0</span>,</span><br><span class="line">  <span class="string">"data"</span>: &#123;</span><br><span class="line">    <span class="string">"id"</span>: <span class="number">123</span>,</span><br><span class="line">    <span class="string">"name"</span>: <span class="string">"jim"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>成功列表：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"code"</span>: <span class="number">0</span>,</span><br><span class="line">  <span class="string">"data"</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"id"</span>: <span class="number">1</span>,</span><br><span class="line">      <span class="string">"name"</span>: <span class="string">"tom"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"id"</span>: <span class="number">2</span>,</span><br><span class="line">      <span class="string">"name"</span>: <span class="string">"jerry"</span></span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="string">"meta"</span>: &#123;</span><br><span class="line">    <span class="string">"total"</span>: <span class="number">2</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>错误示例：<br>code: -1为默认通用错误<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"code"</span>: <span class="number">-1</span>,</span><br><span class="line">  <span class="string">"msg"</span>: <span class="string">"some error message"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>当然错误里也可以带data和meta如果需要的话；</p>
+
+      
+
+      
+        
+    </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/05/15/SSL-Connect-Error-Solution/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">SSL Connect Error Solution</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="post-json-api" data-title="json-api接口规范和示例" data-url="http://shukyoo.github.io/2017/09/03/json-api/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"fredyang"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+</section>
+</section>
+        <aside id="sidebar">
+  <nav class="menus">
+  	<ul>
+  		<li><a href="/"><i class="icon icon-home"></i></a></li>
+  		
+			<li><a href="/archives"><i class="icon icon-fenlei"></i></a></li>
+  		
+  		
+			<li><a href="/tags"><i class="icon icon-tag"></i></a></li>
+  		
+  		
+  	</ul>
+  </nav>
+  <a id="go-top" href="#"><i class="icon icon-up"></i></a>
+</aside>
+      </div>
+      <footer id="footer">
+  
+	<div id="footer-info" class="inner">
+	  &copy; 2017 Fredyang 
+	  - Hosted on <a href="https://github.com/" target="_blank">Github</a>
+	  - Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	  - Contact me: shuky2000#163.com
+	</div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tag</a>
+  
+    <a href="/" class="mobile-nav-link">Github</a>
+  
+</nav>
+    
+
+<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
